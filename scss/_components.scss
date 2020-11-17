@@ -1,0 +1,97 @@
+// INTRO ANIMATION //
+
+// .intro {
+//     &__svgLetters {
+//         position: absolute;
+//         left: 50%;
+//         top: 50%;
+//         transform: translate(-50%, -50%);
+//     }
+
+//     &__divConatiner {
+//         @include flexRow;
+//         width: 100vw;
+//         overflow-x: hidden;
+//     }
+
+//     &__div {
+//         height: 100vh;
+//         width: 50%;
+//         background-color: black;
+//     }
+// }
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.btn-animation {
+    transition: transform .25s ease;
+    
+    &:hover {
+        transform: scale(.95);
+        color: #CD65CD;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translate(-50%) scale(0);
+        height: .1rem;
+        width: 25%;
+        background-color: #CD65CD;
+        content: "";
+        transition: transform .25s ease;
+    }
+
+    &:hover::after {
+        transform: translate(-50%) scale(1);
+    }
+
+    &:focus {
+        outline: none;
+        color: #CD65CD;
+        transform: scale(.95);
+
+        &::after {
+            transform: translate(-50%) scale(1);
+        }
+    }
+}
+
+.scrollSpy {
+    transform: scale(.95);
+    color: #CD65CD !important;
+}
+
+.container {
+    padding: 5rem 0;
+}
+
+section {
+    background-color: #161412;   
+}
+
+.headingNarrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #0a0908;
+    border: 1px solid transparent;
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    transition: width .5s ease, height .5s ease;
+
+    &--active {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+
+
+
+
+

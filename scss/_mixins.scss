@@ -1,0 +1,29 @@
+@mixin flexRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin images($bgImg) {
+    background-image: url($bgImg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin card-info {
+    @include flexColumn;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    opacity: 0;
+    background-color: #161412c9;
+    transition: border-radius .25s ease, height .25s, opacity .5s;
+}
