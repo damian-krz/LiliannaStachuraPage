@@ -671,18 +671,86 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 20rem;
 }
 
-.contactSection__contactList {
-  list-style: none;
+.contactSection__container-form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.contactSection__contactList li {
-  text-align: center;
+.contactSection__container-form-label {
+  padding: .75rem 0;
+  text-transform: uppercase;
+  max-width: 95%;
 }
 
-.contactSection__contactList-phone {
+.contactSection__container-form-input {
+  width: 100%;
+  max-width: 75%;
+  padding: .5rem 2rem;
+  border: 1px solid transparent;
+  -webkit-transition: border-radius .25s ease, border .25s ease;
+  transition: border-radius .25s ease, border .25s ease;
+}
+
+.contactSection__container-form-input:hover {
+  border-radius: 1rem;
+  border: 1px solid #CD65CD;
+}
+
+.contactSection__container-form-input:focus {
+  border-radius: 1rem;
+  border: 1px solid #CD65CD;
+  outline: none;
+}
+
+.contactSection__container-form-textArea {
+  height: 15rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 75%;
+  border: 1px solid transparent;
+  -webkit-transition: border-radius .25s ease, border .25s ease;
+  transition: border-radius .25s ease, border .25s ease;
+}
+
+.contactSection__container-form-textArea:hover {
+  border-radius: 1rem;
+  border: 1px solid #CD65CD;
+}
+
+.contactSection__container-form-textArea:focus {
+  border-radius: 1rem;
+  border: 1px solid #CD65CD;
+  outline: none;
+}
+
+.contactSection__contact-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 3.2rem;
 }
 

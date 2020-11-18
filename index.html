@@ -144,16 +144,22 @@
                 <div class="headingNarrow"></div> 
                 <h2 class="section-heading">kontakt</h2>
                 <div class="contactSection__container container">
-                    <ul class="contactSection__contactList">
-                        <div class="contactSection__contactList-email">
-                            <h3 class="section-subheading">e-mail</h3>
-                            <li>lilianna.s@onet.pl</li>
-                        </div>
-                        <div class="contactSection__contactList-phone">
+                    <h3 class="section-subheading">napisz do mnie</h3>
+                        <form class="contactSection__container-form">
+                            <label for="name" class="contactSection__container-form-label">Imię i nazwisko:</label>
+                            <input type="text" class="contactSection__container-form-input" id="name">
+                        
+                            <label for="email" class="contactSection__container-form-label">E-mail:</label>
+                            <input type="text" class="contactSection__container-form-input" id="email">
+
+                            <label for="message" class="contactSection__container-form-label"></label>
+                            <textarea class="contactSection__container-form-textArea" id="message"></textarea>
+                            <button class="contactSection__container-form-btn">Wyślij</button>
+                        </form>
+                        <div class="contactSection__contact-phone">
                             <h3 class="section-subheading">telefon</h3>
-                            <li>600-661-887</li>
+                            <p>600-661-887</p>
                         </div>
-                    </ul>
                 </div>
             </section>
         </main>
