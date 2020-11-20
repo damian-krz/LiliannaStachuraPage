@@ -208,3 +208,5 @@ const currentYear = () => {
 
 
 document.addEventListener("DOMContentLoaded", initialize);
+
+

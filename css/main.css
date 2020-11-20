@@ -573,9 +573,9 @@ section {
   font-size: 1.2rem;
   font-weight: bold;
   border: 1px solid transparent;
-  border-radius: 10px;
+  border-radius: 1rem;
   text-transform: uppercase;
-  background-color: #161412;
+  background-color: #0a0908;
   cursor: pointer;
   -webkit-transition: border .25s ease, -webkit-transform .25s ease;
   transition: border .25s ease, -webkit-transform .25s ease;
@@ -693,48 +693,74 @@ section {
 .contactSection__container-form-label {
   padding: .75rem 0;
   text-transform: uppercase;
-  max-width: 95%;
 }
 
 .contactSection__container-form-input {
-  width: 100%;
-  max-width: 75%;
-  padding: .5rem 2rem;
-  border: 1px solid transparent;
+  width: 75%;
+  padding: .75rem 2rem;
+  border: 2px solid transparent;
   -webkit-transition: border-radius .25s ease, border .25s ease;
   transition: border-radius .25s ease, border .25s ease;
 }
 
 .contactSection__container-form-input:hover {
   border-radius: 1rem;
-  border: 1px solid #CD65CD;
+  border: 2px solid #CD65CD;
 }
 
 .contactSection__container-form-input:focus {
   border-radius: 1rem;
-  border: 1px solid #CD65CD;
+  border: 2px solid #CD65CD;
   outline: none;
 }
 
 .contactSection__container-form-textArea {
   height: 15rem;
-  padding: 1rem 2rem;
-  width: 100%;
+  padding: .75rem 2rem;
+  width: 75%;
   max-width: 75%;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   -webkit-transition: border-radius .25s ease, border .25s ease;
   transition: border-radius .25s ease, border .25s ease;
 }
 
 .contactSection__container-form-textArea:hover {
   border-radius: 1rem;
-  border: 1px solid #CD65CD;
+  border: 2px solid #CD65CD;
 }
 
 .contactSection__container-form-textArea:focus {
   border-radius: 1rem;
-  border: 1px solid #CD65CD;
+  border: 2px solid #CD65CD;
   outline: none;
+}
+
+.contactSection__container-form-formBtn {
+  margin-top: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  color: #0a0908;
+  background-color: #CD65CD;
+  cursor: pointer;
+  -webkit-transition: border-radius .25s ease;
+  transition: border-radius .25s ease;
+}
+
+.contactSection__container-form-formBtn:hover {
+  border-radius: 1rem;
+}
+
+.contactSection__container-form-formBtn:focus {
+  border-radius: 1rem;
+  outline: none;
+}
+
+.contactSection__container-form-formBtn:active {
+  color: #eae0d5;
+  border: 2px solid #eae0d5;
 }
 
 .contactSection__contact-phone {
