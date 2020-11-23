@@ -13,32 +13,34 @@
 html {
     font-size: 62.5%;
     font-family: "Barlow", sans-serif;
-    color: #EAE0D5;
+    color: $font-color;
     scroll-behavior: smooth;
-    background-color: #0a0908;
+}
+
+main {
+    transition: opacity .25s ease;
 }
 
 // ------------ SECTIONS ------------ //
 
 section {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     scroll-margin-top: 8rem;
 }
 
 .section-heading {
     width: 100%;
-    color: #CD65CD;
+    color: $theme-color;
     padding: 6.2rem;
     text-align: center;
     font-size: 3.2rem;
     text-transform: uppercase;
-    background-color: #0a0908;
-    // margin-top: 20rem;
+    background-color: $main-color;
     transition: background-color .5s ease, color .5s ease;
 
     &--active {
-        background-color: #CD65CD;
-        color: #0a0908;
+        background-color: $theme-color;
+        color: $main-color;
     }
 
 }
@@ -46,10 +48,9 @@ section {
 .section-subheading {
     @include flexColumn;
     width: 100%;
-    color: #EAE0D5;
     padding-bottom: 1rem;
     font-size: 2rem;
-    color: #CD65CD;
+    color: $theme-color;
     text-transform: uppercase;
 }
 
@@ -58,7 +59,7 @@ section {
     height: .2rem;
     width: 2rem;
     border-radius: 1rem;
-    background-color: #CD65CD;
+    background-color: $theme-color;
     content: "";
 }
 
@@ -72,7 +73,7 @@ section {
     height: 8rem;
     width: 100%;
     z-index: 2;
-    background-color: #0a0908;
+    background-color: $main-color;
 
     &__hamburgerButton {
         @include flexColumn;
@@ -85,7 +86,8 @@ section {
         &--active .navBar__hamburgerButtonBar {
             width: 4rem;
             transform: rotate(45deg);
-            background-color: #CD65CD;
+            background-color: $theme-color;
+            opacity: 1;
         }
 
         &--active .navBar__hamburgerButtonBar::before {
@@ -95,7 +97,7 @@ section {
         &--active .navBar__hamburgerButtonBar::after {
             width: 4rem;
             transform: rotate(-90deg) translate(15px);
-            background-color: #CD65CD;
+            background-color: $theme-color;
         }
     }
 
@@ -105,7 +107,7 @@ section {
         position: absolute;
         height: .5rem;
         border-radius: 1rem;
-        background-color: #eae0d5;
+        background-color: $font-color;
         transition: width .25s ease, background-color .25s ease, transform .25s ease, left .25s ease;
     }
 
@@ -138,7 +140,7 @@ section {
 
     &__hamburgerButton:focus {
         outline: none;
-        border: 1px solid #CD65CD;
+        border: 1px solid $theme-color;
         border-radius: 1rem;
     }
 
@@ -172,25 +174,26 @@ section {
     &__field:hover &__btn {
         border-radius: 1rem;
         transform: scale(.95);
-        color: #CD65CD;
-        border: 1px solid #CD65CD;
+        color: $theme-color;
+        border: 1px solid $theme-color;
     }
 
     &__btn:focus {
         outline: none;
         border-radius: 1rem;
         transform: scale(.95);
-        color: #CD65CD;
-        border: 1px solid #CD65CD;
+        color: $theme-color;
+        border: 1px solid $theme-color;
     }
 
     &__btn {
         @include flexColumn;
         font-size: 2rem;
         height: 100%;
-        color: #eae0d5;
+        color: $font-color;
         text-decoration: none;
-        background-color: #0a0908;
+        background-color: $main-color;
+        border: 1px solid transparent;
         transition: border-radius .25s ease, border .25s ease, transform .25s ease;
     }
 
@@ -358,17 +361,17 @@ section {
         border: 1px solid transparent;
         border-radius: 1rem;
         text-transform: uppercase;
-        background-color: #0a0908;
+        background-color: $main-color;
         cursor: pointer;
         transition: border .25s ease, transform .25s ease;
     }
 
     &__card-moreBtn:hover {
         transform: scale(.95);
-        border: 1px solid #CD65CD;
+        border: 1px solid $theme-color;
 
         .portfolioSection__card-moreBtnContent {
-            color: #CD65CD;
+            color: $theme-color;
         }
     }
 
@@ -377,7 +380,7 @@ section {
         transform: scale(.95);
 
         .portfolioSection__card-moreBtnContent {
-            color: #CD65CD;
+            color: $theme-color;
         }
     }
 
@@ -389,7 +392,7 @@ section {
         height: 100%;
         width: 100%;
         border-radius: 10px;
-        color: #EAE0D5;
+        color: $font-color;
         text-decoration: none;
         transition: color .25s ease;
     }
@@ -414,11 +417,11 @@ section {
 .contactSection {
     &__container {
         @include flexColumn;
-        
+
         &-form {
             width: 100%;
             @include flexColumn;
-            
+
             &-label {
                 padding: .75rem 0;
                 text-transform: uppercase;
@@ -429,19 +432,20 @@ section {
                 padding: .75rem 2rem;
                 border: 2px solid transparent;
                 transition: border-radius .25s ease, border .25s ease;
-                
+                font-family: inherit;
+
                 &:hover {
                     border-radius: 1rem;
-                    border: 2px solid #CD65CD;
+                    border: 2px solid $theme-color;
                 }
-                
+
                 &:focus {
                     border-radius: 1rem;
-                    border: 2px solid #CD65CD;
-                    outline: none; 
+                    border: 2px solid $theme-color;
+                    outline: none;
                 }
             }
-            
+
             &-textArea {
                 height: 15rem;
                 padding: .75rem 2rem;
@@ -452,12 +456,12 @@ section {
 
                 &:hover {
                     border-radius: 1rem;
-                    border: 2px solid #CD65CD;
+                    border: 2px solid $theme-color;
                 }
-                
+
                 &:focus {
                     border-radius: 1rem;
-                    border: 2px solid #CD65CD;
+                    border: 2px solid $theme-color;
                     outline: none;
                 }
             }
@@ -469,11 +473,11 @@ section {
                 font-weight: bold;
                 border: 2px solid transparent;
                 text-transform: uppercase;
-                color: #0a0908;
-                background-color: #CD65CD;
+                color: $main-color;
+                background-color: $theme-color;
                 cursor: pointer;
                 transition: border-radius .25s ease;
-                
+
                 &:hover {
                     border-radius: 1rem;
                 }
@@ -484,16 +488,30 @@ section {
                 }
 
                 &:active {
-                    color: #eae0d5;
-                    border: 2px solid #eae0d5;
+                    color: $font-color;
+                    border: 2px solid $font-color;
                 }
             }
+        }
     }
-}
 
     &__contact-phone {
         @include flexColumn;
         padding-top: 3.2rem;
+
+        a {
+            color: $font-color;
+            transition: color .25s ease;
+
+            &:hover {
+                color: $theme-color;
+            }
+
+            &:focus {
+                outline: none;
+                color: $theme-color;
+            }
+        }
     }
 }
 
@@ -501,7 +519,7 @@ section {
 
 .footerSection {
     bottom: 0;
-    background-color: #0a0908;
+    background-color: $main-color;
     font-size: 1.4rem;
 
     &__box {
@@ -516,7 +534,7 @@ section {
         &-btn {
             padding: 2rem 1rem;
             text-decoration: none;
-            color: #eae0d5;
+            color: $font-color;
             cursor: pointer;
         }
     }
@@ -524,12 +542,9 @@ section {
     &__map {
         @include flexRow;
 
-        &-project {
+        p {
             padding: 2rem 1rem;
-            text-decoration: none;
-            color: #eae0d5;
         }
-
     }
 
     &__bottom-text {
@@ -540,5 +555,5 @@ section {
 }
 
 hr {
-    border: .1px solid #CD65CD;
+    border: .1px solid $theme-color;
 }

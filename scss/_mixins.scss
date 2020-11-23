@@ -24,6 +24,6 @@
     height: 0;
     width: 100%;
     opacity: 0;
-    background-color: #161412c9;
+    background-color: $active-cards-color;
     transition: border-radius .25s ease, height .25s, opacity .5s;
 }

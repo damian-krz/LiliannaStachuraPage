@@ -1,3 +1,4 @@
+let $main;
 let $introSvgLetters;
 let $hamburgerButton;
 let $hamburgerMenuButtons;
@@ -16,12 +17,13 @@ const initialize = () => {
 };
 
 const prepareDomElements = () => {
+    $main = document.querySelector("main");
     $introSvgLetters = document.querySelector(".intro__svgLetters");
     $hamburgerButton = document.querySelector(".navBar__hamburgerButton");
     $hamburgerMenuButtons = document.querySelectorAll(".hamburgerMenu__btn");
     $hamburgerMenu = document.querySelector(".hamburgerMenu");
     $homeSlider = document.querySelector(".homeSection__homeSlider");
-    $footerMenuButtons = document.querySelectorAll(".footerSection__btn");
+    $footerMenuButtons = document.querySelectorAll(".footerSection__menu-btn");
     $footerYear = document.querySelector(".footerSection__year");
     $body = document.body;
     $buttons = document.querySelectorAll(".button");
@@ -93,66 +95,65 @@ const prepareDomEvents = () => {
             });
         });
     };
-
     headingSpy();
 };
 
 
 // ------------ INTRO ------------ //
 
-// const introSvgAnimation = () => {
-//     const svgDocument = $introSvgLetters.contentDocument;
-//     const svg = svgDocument.getElementById("svg");
-//     const svgLetters = svgDocument.getElementById("svg").children;
-//     let nameLetterPostion = 1;
-//     let surnameLetterPosition = 16;
-//     let numberOfLetters = 16;   
-//     let totalLengthNameLetters = svgDocument.getElementById("svg").children[nameLetterPostion].getTotalLength();
-//     let totalLengthSurnameLetters = svgDocument.getElementById("svg").children[surnameLetterPosition].getTotalLength();
+const introSvgAnimation = () => {
+    const svgDocument = $introSvgLetters.contentDocument;
+    const svg = svgDocument.getElementById("svg");
+    const svgLetters = svgDocument.getElementById("svg").children;
+    let nameLetterPostion = 1;
+    let surnameLetterPosition = 16;
+    let numberOfLetters = 16;   
+    let totalLengthNameLetters = svgDocument.getElementById("svg").children[nameLetterPostion].getTotalLength();
+    let totalLengthSurnameLetters = svgDocument.getElementById("svg").children[surnameLetterPosition].getTotalLength();
     
-//     const drawLetters = () => {
-//         for(let i = 1; i <= numberOfLetters; i++) {
-//             let totalLength = svgDocument.getElementById("svg").children[i].getTotalLength();
-//             svgLetters[i].style.strokeDasharray = totalLength + "px";
-//             svgLetters[i].style.strokeDashoffset = totalLength + "px";
-//         }; 
-//         iterateSvgLetters();
-//     };
+    const drawLetters = () => {
+        for(let i = 1; i <= numberOfLetters; i++) {
+            let totalLength = svgDocument.getElementById("svg").children[i].getTotalLength();
+            svgLetters[i].style.strokeDasharray = totalLength + "px";
+            svgLetters[i].style.strokeDashoffset = totalLength + "px";
+        }; 
+        iterateSvgLetters();
+    };
     
-//     const iterateSvgLetters = () => {
-//         const drawNameID = setInterval(drawName, 2.5);
-//         const drawSurnameID = setInterval(drawSurname, 2.5);
+    const iterateSvgLetters = () => {
+        const drawNameID = setInterval(drawName, 2.5);
+        const drawSurnameID = setInterval(drawSurname, 2.5);
         
-//         function drawName() {
-//             if(nameLetterPostion == numberOfLetters / 2) {
-//                 clearInterval(drawNameID);
-//             } else if(totalLengthNameLetters <= 0) {
-//                 svgLetters[nameLetterPostion].style.strokeDashoffset = totalLengthNameLetters - totalLengthNameLetters;
-//                 nameLetterPostion++;
-//                 totalLengthNameLetters = svgDocument.getElementById("svg").children[nameLetterPostion].getTotalLength();
-//             } else { 
-//                 totalLengthNameLetters -= 2.5;
-//                 svgLetters[nameLetterPostion].style.strokeDashoffset = totalLengthNameLetters + "px";
-//             }; 
-//         };
+        function drawName() {
+            if(nameLetterPostion == numberOfLetters / 2) {
+                clearInterval(drawNameID);
+            } else if(totalLengthNameLetters <= 0) {
+                svgLetters[nameLetterPostion].style.strokeDashoffset = totalLengthNameLetters - totalLengthNameLetters;
+                nameLetterPostion++;
+                totalLengthNameLetters = svgDocument.getElementById("svg").children[nameLetterPostion].getTotalLength();
+            } else { 
+                totalLengthNameLetters -= 2.5;
+                svgLetters[nameLetterPostion].style.strokeDashoffset = totalLengthNameLetters + "px";
+            }; 
+        };
         
-//         function drawSurname() {
-//             if(surnameLetterPosition < numberOfLetters / 2) {
-//                 clearInterval(drawSurnameID);
-//                 svg.style.transition = "1.5s";
-//                 svg.style.fillOpacity = "0";
-//             } else if(totalLengthSurnameLetters <= 0) {
-//                 svgLetters[surnameLetterPosition].style.strokeDashoffset = totalLengthSurnameLetters - totalLengthSurnameLetters;
-//                 surnameLetterPosition--;  
-//                 totalLengthSurnameLetters = svgDocument.getElementById("svg").children[surnameLetterPosition].getTotalLength();
-//             } else {
-//                 totalLengthSurnameLetters -= 2.5;
-//                 svgLetters[surnameLetterPosition].style.strokeDashoffset = totalLengthSurnameLetters + "px";
-//             }; 
-//         };
-//    };
-//     drawLetters();
-// };
+        function drawSurname() {
+            if(surnameLetterPosition < numberOfLetters / 2) {
+                clearInterval(drawSurnameID);
+                svg.style.transition = "1.5s";
+                svg.style.fillOpacity = "0";
+            } else if(totalLengthSurnameLetters <= 0) {
+                svgLetters[surnameLetterPosition].style.strokeDashoffset = totalLengthSurnameLetters - totalLengthSurnameLetters;
+                surnameLetterPosition--;  
+                totalLengthSurnameLetters = svgDocument.getElementById("svg").children[surnameLetterPosition].getTotalLength();
+            } else {
+                totalLengthSurnameLetters -= 2.5;
+                svgLetters[surnameLetterPosition].style.strokeDashoffset = totalLengthSurnameLetters + "px";
+            }; 
+        };
+   };
+    drawLetters();
+};
 
 // ------------ SLIDESHOW ------------ //
 
@@ -179,19 +180,30 @@ const hamburgerButtonAnimation = () => {
         e.classList.toggle("hamburgerMenu--active");
     });
     $hamburgerMenu.classList.toggle("hamburgerMenu--active");
+    if($hamburgerMenu.classList.contains("hamburgerMenu--active")) {
+        $main.style.opacity = ".75";
+    } else { 
+        mainNormalOpacity();
+    }
 };
 
 const hamburgerMenuAnimation = () => {
     $hamburgerButton.classList.remove("navBar__hamburgerButton--active");
-    $hamburgerMenu.classList.remove("hamburgerMenu--active");   
+    $hamburgerMenu.classList.remove("hamburgerMenu--active");  
+    mainNormalOpacity();
 }
 
 const hamburgerMenuResizeWindowAnimation = () => {
     if(document.documentElement.clientWidth >= 768) {
         $hamburgerButton.classList.remove("navBar__hamburgerButton--active");
         $hamburgerMenu.classList.remove("hamburgerMenu--active");    
+        mainNormalOpacity();
     } 
 };
+
+const mainNormalOpacity = () => {
+    $main.style.opacity = "1";
+}
 
 const closeHamburgerMenu = (e) => {
     if(e.target.closest("main")) {
@@ -206,7 +218,4 @@ const currentYear = () => {
     $footerYear.innerHTML = year;
 };
 
-
 document.addEventListener("DOMContentLoaded", initialize);
-
-

@@ -1,25 +1,28 @@
 // INTRO ANIMATION //
 
-// .intro {
-//     &__svgLetters {
-//         position: absolute;
-//         left: 50%;
-//         top: 50%;
-//         transform: translate(-50%, -50%);
-//     }
-
-//     &__divConatiner {
-//         @include flexRow;
-//         width: 100vw;
-//         overflow-x: hidden;
-//     }
-
-//     &__div {
-//         height: 100vh;
-//         width: 50%;
-//         background-color: black;
-//     }
-// }
+.intro {
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 2;
+    
+    &__svgLetters {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    &__divConatiner {
+        @include flexRow;
+        width: 100vw;
+    }
+    
+    &__div {
+        height: 100vh;
+        width: 50%;
+        background-color: $main-color;
+    }
+}
 
 .wrapper {
     margin: 0 auto;
@@ -32,7 +35,7 @@
     
     &:hover {
         transform: scale(.95);
-        color: #CD65CD;
+        color: $theme-color;
     }
 
     &::after {
@@ -42,7 +45,7 @@
         transform: translate(-50%) scale(0);
         height: .1rem;
         width: 25%;
-        background-color: #CD65CD;
+        background-color: $theme-color;
         content: "";
         transition: transform .25s ease;
     }
@@ -53,7 +56,7 @@
 
     &:focus {
         outline: none;
-        color: #CD65CD;
+        color: $theme-color;
         transform: scale(.95);
 
         &::after {
@@ -64,7 +67,7 @@
 
 .scrollSpy {
     transform: scale(.95);
-    color: #CD65CD !important;
+    color: $theme-color !important;
 }
 
 .container {
@@ -72,14 +75,14 @@
 }
 
 section {
-    background-color: #161412;   
+    background-color: $section-color;   
 }
 
 .headingNarrow {
     position: absolute;
     width: 0;
     height: 0;
-    background-color: #0a0908;
+    background-color: $main-color;
     border: 1px solid transparent;
     clip-path: polygon(100% 0, 0% 100%, 0 0);
     transition: width .5s ease, height .5s ease;
