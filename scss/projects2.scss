@@ -1,0 +1,291 @@
+@import "./colors";
+@import "./mixins";
+@import "./components";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Barlow", sans-serif;
+    color: $font-color;
+    scroll-behavior: smooth;
+    background-color: $main-color;
+}
+
+main {
+    transition: opacity .25s ease;
+}
+
+// ------------ SECTIONS ------------ //
+
+section {
+    font-size: 1.6rem;
+    scroll-margin-top: 8rem;
+}
+
+.section-heading {
+    width: 100%;
+    color: $theme-color;
+    padding: 6.2rem;
+    text-align: center;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    background-color: $main-color;
+    transition: background-color .5s ease, color .5s ease;
+
+    &--active {
+        background-color: $theme-color;
+        color: $main-color;
+    }
+
+}
+
+.section-subheading {
+    @include flexColumn;
+    width: 100%;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: $theme-color;
+    text-transform: uppercase;
+}
+
+.section-subheading::after {
+    margin-top: .5rem;
+    height: .2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    background-color: $theme-color;
+    content: "";
+}
+
+// ------------ NAV-BAR ------------ //
+
+.navBar {
+    @include flexRow;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    height: 8rem;
+    width: 100%;
+    z-index: 2;
+    background-color: $main-color;
+
+    &__hamburgerButton {
+        @include flexColumn;
+        padding: 3rem 3.5rem;
+        border: 1px solid transparent;
+        background-color: transparent;
+        cursor: pointer;
+        transition: border .25s ease, border-radius .25s ease;
+
+        &--active .navBar__hamburgerButtonBar {
+            width: 4rem;
+            transform: rotate(45deg);
+            background-color: $theme-color;
+            opacity: 1;
+        }
+
+        &--active .navBar__hamburgerButtonBar::before {
+            background-color: transparent;
+        }
+
+        &--active .navBar__hamburgerButtonBar::after {
+            width: 4rem;
+            transform: rotate(-90deg) translate(15px);
+            background-color: $theme-color;
+        }
+    }
+
+    &__hamburgerButtonBar,
+    &__hamburgerButtonBar::before,
+    &__hamburgerButtonBar::after {
+        position: absolute;
+        height: .5rem;
+        border-radius: 1rem;
+        background-color: $font-color;
+        transition: width .25s ease, background-color .25s ease, transform .25s ease, left .25s ease;
+    }
+
+    &__hamburgerButtonBar {
+        width: 2rem;
+
+        &::before {
+            width: 4rem;
+            right: 0;
+            bottom: 1.5rem;
+            content: "";
+        }
+
+        &::after {
+            width: 1rem;
+            right: 0;
+            top: 1.5rem;
+            content: "";
+        }
+    }
+
+    &__hamburgerButton:hover {
+
+        .navBar__hamburgerButtonBar,
+        .navBar__hamburgerButtonBar::before,
+        .navBar__hamburgerButtonBar::after {
+            width: 4rem;
+        }
+    }
+
+    &__hamburgerButton:focus {
+        outline: none;
+        border: 1px solid $theme-color;
+        border-radius: 1rem;
+    }
+
+    &__desktopMenu {
+        display: none;
+    }
+}
+
+// ------------ HAMBURGER MENU ------------ //
+
+.hamburgerMenu {
+    position: fixed;
+    top: -50%;
+    height: 50%;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: top .25s ease;
+
+    &__field {
+        height: 100%;
+    }
+
+    &__field:hover &__btn {
+        border-radius: 1rem;
+        transform: scale(.95);
+        color: $theme-color;
+        border: 1px solid $theme-color;
+    }
+
+    &__btn:focus {
+        outline: none;
+        border-radius: 1rem;
+        transform: scale(.95);
+        color: $theme-color;
+        border: 1px solid $theme-color;
+    }
+
+    &__btn {
+        @include flexColumn;
+        font-size: 2rem;
+        height: 100%;
+        color: $font-color;
+        text-decoration: none;
+        background-color: $main-color;
+        border: 1px solid transparent;
+        transition: border-radius .25s ease, border .25s ease, transform .25s ease;
+    }
+
+    &--active {
+        top: 8rem;
+    }
+}
+
+// ------------ HOME ------------ //
+
+.homeSection {
+    height: 100vh;
+
+    &__headerImage {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        @include images("../img/hala/projekt/medium/main_hala.jpg")
+    }
+}
+
+// ------------ ABOUT PROJECT ------------ // 
+
+.aboutProjectSection {
+    position: relative;
+
+    &__container {
+        @include flexColumn;
+        padding: 20px;
+    }
+
+    &__subContainer {
+        @include flexRow;
+        width: 100%;
+    }
+
+}
+
+// ------------ PROJECT ------------ //
+
+.projectSection {
+    &__container {
+        border: 1px solid red;
+        padding: 5rem 20rem;
+    }
+}
+
+.image {
+    height: auto;
+    max-width: 100%;
+}
+
+    // ------------ FOOTER ------------ //
+
+.footerSection {
+    bottom: 0;
+    background-color: $main-color;
+    font-size: 1.4rem;
+    
+    &__box {
+        @include flexRow;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    &__menu {
+        @include flexRow;
+
+        &-btn {
+            padding: 2rem 1rem;
+            text-decoration: none;
+            color: $font-color;
+            cursor: pointer;
+        }
+    }
+
+    &__map {
+        @include flexRow;
+
+        p {
+            padding: 2rem 1rem;
+        }
+    }
+
+    &__bottom-text {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: .2rem;
+    }
+}
+
+hr {
+    border: .1px solid $theme-color;
+}

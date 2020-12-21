@@ -15,6 +15,7 @@ html {
     font-family: "Barlow", sans-serif;
     color: $font-color;
     scroll-behavior: smooth;
+    background-color: $main-color;
 }
 
 main {
@@ -205,7 +206,6 @@ section {
 // ------------ HOME ------------ //
 
 .homeSection {
-    position: relative;
     height: 100vh;
 
     &__homeCarousel {
@@ -217,33 +217,54 @@ section {
     &__homeSlider {
         display: flex;
         height: 100%;
-        width: 300%;
-        transition: transform 5s linear 10s;
+        width: 700%;
+        transition: transform 5s ease-in-out 10s;
 
         .homeSection__firstSlide,
         .homeSection__secondSlide,
-        .homeSection__thirdSlide {
+        .homeSection__thirdSlide,
+        .homeSection__fourthSlide,
+        .homeSection__fifthSlide,
+        .homeSection__sixthSlide,
+        .homeSection__seventhSlide {
             width: 100%;
             height: 100%;
         }
     }
 
     &__firstSlide {
-        @include images("../img/1_1920x1080.jpg");
+        @include images("../img/hala/projekt/medium/main_hala.jpg");
     }
 
     &__secondSlide {
-        @include images("../img/2_1920x1080.jpg");
+        @include images("../img/hotel/6-wizualizacja.jpg");
     }
 
     &__thirdSlide {
-        @include images("../img/3_1920x1080.jpg");
+        @include images("../img/kino/5-wizka.jpg");
+    }
+    
+    &__fourthSlide {
+        @include images("../img/rower/10-wizka.jpg");
+    }
+    
+    &__fifthSlide {
+        @include images("../img/swiatlo/2 wizka.jpg");
+    }
+    
+    &__sixthSlide {
+        @include images("../img/zielen/3wizka wiosna.jpg");
+    }
+    
+    &__seventhSlide {
+        @include images("../img/zycie/11wizka.jpg");
     }
 }
 
 // ------------ ABOUT ME ------------ // 
 
 .aboutMeSection {
+    position: relative;
     &__container {
         @include flexColumn;
     }
@@ -285,7 +306,7 @@ section {
         display: grid;
         grid-template-columns: 95%;
         justify-content: center;
-        row-gap: 3.2rem;
+        row-gap: 1.6rem;
     }
 
     &__card {
@@ -326,15 +347,27 @@ section {
     }
 
     &__card-img--first {
-        @include images("../img/1_1920x1080.jpg");
+        @include images("../img/swiatlo/2 wizka.jpg");
     }
-
+    
     &__card-img--second {
-        @include images("../img/2_1920x1080.jpg");
+        @include images("../img/hala/projekt/medium/main_hala.jpg");
+    }
+    
+    &__card-img--third {
+        @include images("../img/kino/5-wizka.jpg");
+    }
+    
+    &__card-img--fourth {
+        @include images("../img/rower/10-wizka.jpg");
+    }
+    
+    &__card-img--fifth {
+        @include images("../img/hotel/6-wizualizacja.jpg");
     }
 
-    &__card-img--third {
-        @include images("../img/3_1920x1080.jpg");
+    &__card-img--sixth {
+        @include images("../img/zycie/11wizka.jpg");
     }
 
     &__card-infoTop {
@@ -557,3 +590,4 @@ section {
 hr {
     border: .1px solid $theme-color;
 }
+

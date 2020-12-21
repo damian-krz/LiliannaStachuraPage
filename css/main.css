@@ -128,6 +128,7 @@ html {
   font-family: "Barlow", sans-serif;
   color: #e8eddf;
   scroll-behavior: smooth;
+  background-color: #242423;
 }
 
 main {
@@ -369,7 +370,6 @@ section {
 }
 
 .homeSection {
-  position: relative;
   height: 100vh;
 }
 
@@ -384,39 +384,75 @@ section {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  width: 300%;
-  -webkit-transition: -webkit-transform 5s linear 10s;
-  transition: -webkit-transform 5s linear 10s;
-  transition: transform 5s linear 10s;
-  transition: transform 5s linear 10s, -webkit-transform 5s linear 10s;
+  width: 700%;
+  -webkit-transition: -webkit-transform 5s ease-in-out 10s;
+  transition: -webkit-transform 5s ease-in-out 10s;
+  transition: transform 5s ease-in-out 10s;
+  transition: transform 5s ease-in-out 10s, -webkit-transform 5s ease-in-out 10s;
 }
 
 .homeSection__homeSlider .homeSection__firstSlide,
 .homeSection__homeSlider .homeSection__secondSlide,
-.homeSection__homeSlider .homeSection__thirdSlide {
+.homeSection__homeSlider .homeSection__thirdSlide,
+.homeSection__homeSlider .homeSection__fourthSlide,
+.homeSection__homeSlider .homeSection__fifthSlide,
+.homeSection__homeSlider .homeSection__sixthSlide,
+.homeSection__homeSlider .homeSection__seventhSlide {
   width: 100%;
   height: 100%;
 }
 
 .homeSection__firstSlide {
-  background-image: url("../img/1_1920x1080.jpg");
+  background-image: url("../img/hala/projekt/medium/main_hala.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .homeSection__secondSlide {
-  background-image: url("../img/2_1920x1080.jpg");
+  background-image: url("../img/hotel/6-wizualizacja.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .homeSection__thirdSlide {
-  background-image: url("../img/3_1920x1080.jpg");
+  background-image: url("../img/kino/5-wizka.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.homeSection__fourthSlide {
+  background-image: url("../img/rower/10-wizka.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homeSection__fifthSlide {
+  background-image: url("../img/swiatlo/2 wizka.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homeSection__sixthSlide {
+  background-image: url("../img/zielen/3wizka wiosna.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homeSection__seventhSlide {
+  background-image: url("../img/zycie/11wizka.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aboutMeSection {
+  position: relative;
 }
 
 .aboutMeSection__container {
@@ -486,7 +522,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  row-gap: 3.2rem;
+  row-gap: 1.6rem;
 }
 
 .portfolioSection__card {
@@ -531,21 +567,42 @@ section {
 }
 
 .portfolioSection__card-img--first {
-  background-image: url("../img/1_1920x1080.jpg");
+  background-image: url("../img/swiatlo/2 wizka.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .portfolioSection__card-img--second {
-  background-image: url("../img/2_1920x1080.jpg");
+  background-image: url("../img/hala/projekt/medium/main_hala.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .portfolioSection__card-img--third {
-  background-image: url("../img/3_1920x1080.jpg");
+  background-image: url("../img/kino/5-wizka.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.portfolioSection__card-img--fourth {
+  background-image: url("../img/rower/10-wizka.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.portfolioSection__card-img--fifth {
+  background-image: url("../img/hotel/6-wizualizacja.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.portfolioSection__card-img--sixth {
+  background-image: url("../img/zycie/11wizka.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

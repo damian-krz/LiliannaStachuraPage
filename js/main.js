@@ -27,7 +27,6 @@ const prepareDomElements = () => {
     $footerYear = document.querySelector(".footerSection__year");
     $body = document.body;
     $buttons = document.querySelectorAll(".button");
-    $aboutMe = document.querySelector(".aboutMeSection");
     $navBar = document.querySelector(".navBar__desktopMenu");
     $headingNarrow = document.querySelectorAll(".headingNarrow");
     $headingSection = document.querySelectorAll(".section-heading");
@@ -96,70 +95,71 @@ const prepareDomEvents = () => {
         });
     };
     headingSpy();
+
 };
 
 
 // ------------ INTRO ------------ //
 
-const introSvgAnimation = () => {
-    const svgDocument = $introSvgLetters.contentDocument;
-    const svg = svgDocument.getElementById("svg");
-    const svgLetters = svgDocument.getElementById("svg").children;
-    let nameLetterPostion = 1;
-    let surnameLetterPosition = 16;
-    let numberOfLetters = 16;   
-    let totalLengthNameLetters = svgDocument.getElementById("svg").children[nameLetterPostion].getTotalLength();
-    let totalLengthSurnameLetters = svgDocument.getElementById("svg").children[surnameLetterPosition].getTotalLength();
+// const introSvgAnimation = () => {
+//     const svgDocument = $introSvgLetters.contentDocument;
+//     const svg = svgDocument.getElementById("svg");
+//     const svgLetters = svgDocument.getElementById("svg").children;
+//     let nameLetterPostion = 1;
+//     let surnameLetterPosition = 16;
+//     let numberOfLetters = 16;   
+//     let totalLengthNameLetters = svgDocument.getElementById("svg").children[nameLetterPostion].getTotalLength();
+//     let totalLengthSurnameLetters = svgDocument.getElementById("svg").children[surnameLetterPosition].getTotalLength();
     
-    const drawLetters = () => {
-        for(let i = 1; i <= numberOfLetters; i++) {
-            let totalLength = svgDocument.getElementById("svg").children[i].getTotalLength();
-            svgLetters[i].style.strokeDasharray = totalLength + "px";
-            svgLetters[i].style.strokeDashoffset = totalLength + "px";
-        }; 
-        iterateSvgLetters();
-    };
+//     const drawLetters = () => {
+//         for(let i = 1; i <= numberOfLetters; i++) {
+//             let totalLength = svgDocument.getElementById("svg").children[i].getTotalLength();
+//             svgLetters[i].style.strokeDasharray = totalLength + "px";
+//             svgLetters[i].style.strokeDashoffset = totalLength + "px";
+//         }; 
+//         iterateSvgLetters();
+//     };
     
-    const iterateSvgLetters = () => {
-        const drawNameID = setInterval(drawName, 2.5);
-        const drawSurnameID = setInterval(drawSurname, 2.5);
+//     const iterateSvgLetters = () => {
+//         const drawNameID = setInterval(drawName, 2.5);
+//         const drawSurnameID = setInterval(drawSurname, 2.5);
         
-        function drawName() {
-            if(nameLetterPostion == numberOfLetters / 2) {
-                clearInterval(drawNameID);
-            } else if(totalLengthNameLetters <= 0) {
-                svgLetters[nameLetterPostion].style.strokeDashoffset = totalLengthNameLetters - totalLengthNameLetters;
-                nameLetterPostion++;
-                totalLengthNameLetters = svgDocument.getElementById("svg").children[nameLetterPostion].getTotalLength();
-            } else { 
-                totalLengthNameLetters -= 2.5;
-                svgLetters[nameLetterPostion].style.strokeDashoffset = totalLengthNameLetters + "px";
-            }; 
-        };
+//         function drawName() {
+//             if(nameLetterPostion == numberOfLetters / 2) {
+//                 clearInterval(drawNameID);
+//             } else if(totalLengthNameLetters <= 0) {
+//                 svgLetters[nameLetterPostion].style.strokeDashoffset = totalLengthNameLetters - totalLengthNameLetters;
+//                 nameLetterPostion++;
+//                 totalLengthNameLetters = svgDocument.getElementById("svg").children[nameLetterPostion].getTotalLength();
+//             } else { 
+//                 totalLengthNameLetters -= 2.5;
+//                 svgLetters[nameLetterPostion].style.strokeDashoffset = totalLengthNameLetters + "px";
+//             }; 
+//         };
         
-        function drawSurname() {
-            if(surnameLetterPosition < numberOfLetters / 2) {
-                clearInterval(drawSurnameID);
-                svg.style.transition = "1.5s";
-                svg.style.fillOpacity = "0";
-            } else if(totalLengthSurnameLetters <= 0) {
-                svgLetters[surnameLetterPosition].style.strokeDashoffset = totalLengthSurnameLetters - totalLengthSurnameLetters;
-                surnameLetterPosition--;  
-                totalLengthSurnameLetters = svgDocument.getElementById("svg").children[surnameLetterPosition].getTotalLength();
-            } else {
-                totalLengthSurnameLetters -= 2.5;
-                svgLetters[surnameLetterPosition].style.strokeDashoffset = totalLengthSurnameLetters + "px";
-            }; 
-        };
-   };
-    drawLetters();
-};
+//         function drawSurname() {
+//             if(surnameLetterPosition < numberOfLetters / 2) {
+//                 clearInterval(drawSurnameID);
+//                 svg.style.transition = "1.5s";
+//                 svg.style.fillOpacity = "0";
+//             } else if(totalLengthSurnameLetters <= 0) {
+//                 svgLetters[surnameLetterPosition].style.strokeDashoffset = totalLengthSurnameLetters - totalLengthSurnameLetters;
+//                 surnameLetterPosition--;  
+//                 totalLengthSurnameLetters = svgDocument.getElementById("svg").children[surnameLetterPosition].getTotalLength();
+//             } else {
+//                 totalLengthSurnameLetters -= 2.5;
+//                 svgLetters[surnameLetterPosition].style.strokeDashoffset = totalLengthSurnameLetters + "px";
+//             }; 
+//         };
+//    };
+//     drawLetters();
+// };
 
 // ------------ SLIDESHOW ------------ //
 
 const homeSlideShow = () => {
     setInterval(() => {
-        $homeSlider.style.transform = "translateX(-33.3%)";
+        $homeSlider.style.transform = "translateX(-14.28%)";
     }, 1000);
 };
 
@@ -168,7 +168,7 @@ const infiniteHomeSlideShow = () => {
     $homeSlider.style.transition = "none";
     $homeSlider.style.transform = "translateX(0)";
     setTimeout(() => {
-        $homeSlider.style.transition = "transform 5s linear 10s";
+        $homeSlider.style.transition = "transform 5s ease-in-out 10s";
     });
 };
 
