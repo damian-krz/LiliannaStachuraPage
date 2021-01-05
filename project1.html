@@ -8,75 +8,126 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/project_main.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
 
-    <link rel="stylesheet" media="screen and (min-width: 576px)" href="./css/small.css">
-    <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/medium.css">
-    <link rel="stylesheet" media="screen and (min-width: 992px)" href="./css/large.css">
-    <script src="https://kit.fontawesome.com/4e7c6c64fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/project_medium.css">
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="./css/project_large.css">
 </head>
     <body>
-    
         <nav class="navBar">
-            <div class="navBar__controllers">
-                <a href="project3.html" class="navBar__controllers-arrows">
-                    <i class="fas fa-arrow-alt-circle-left"></i>
-                </a>
-                <h3>projekt1</h3>
-                <a href="project2.html" class="navBar__controllers-arrows">
-                    <i class="fas fa-arrow-alt-circle-right"></i>
-                </a>
+            <button class="navBar__hamburgerButton">
+                <div class="navBar__hamburgerButtonBar"></div>
+            </button>
+            <div class="navBar__desktopMenu">
+                <a class="navBar__btn btn-animation" 
+                href="index.html">strona główna</a>
+                <a class="navBar__btn btn-animation" href="#project">projekt</a>
             </div>
         </nav>
         
+        <aside class="hamburgerMenu">
+                <div class="hamburgerMenu__field">
+                    <a class="hamburgerMenu__btn" href="#">home</a>
+                </div>
+                <div class="hamburgerMenu__field">
+                    <a class="hamburgerMenu__btn" href="#project">projekt</a>
+                </div>
+        </aside>
+
         <main>
             <header class="homeSection" id="#">  
-                <div class="homeSection__homeImg"></div>
+                <div class="homeSection__headerImage--project1"></div>
             </header>
-
-            <section class="aboutMeSection wrapper" id="aboutMe">
+            
+            <section class="projectSection wrapper" id="project">
                 <div class="headingNarrow"></div>         
-                <h2 class="section-heading">OPIS</h2>    
-                <div class="aboutMeSection__container container scrlTrigger">
-                        <ul class="aboutMeSection__descriptionList scrlTrigger">
-                            <div class="aboutMeSection__descriptionListElement">
-                                <h3 class="section-subheading">dane</h3>
-                                <li class="aboutMeSection__descriptionListItem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore numquam amet expedita nesciunt, iusto recusandae sequi porro fugit accusamus aliquid tenetur, culpa corrupti doloribus pariatur molestiae? Beatae unde tempore ullam!</li>
-                            </div>
-                            <div class="aboutMeSection__descriptionListElement">
-                                <h3 class="section-subheading">wykształcenie</h3>
-                                <li class="aboutMeSection__descriptionListItem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore numquam amet expedita nesciunt, iusto recusandae sequi porro fugit accusamus aliquid tenetur, culpa corrupti doloribus pariatur molestiae? Beatae unde tempore ullam!</li>
-                            </div>
-                            <div class="aboutMeSection__descriptionListElement">
-                                <h3 class="section-subheading">umiejętności</h3>
-                                <li class="aboutMeSection__descriptionListItem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore numquam amet expedita nesciunt, iusto recusandae sequi porro fugit accusamus aliquid tenetur, culpa corrupti doloribus pariatur molestiae? Beatae unde tempore ullam!</li>
-                            </div>
-                            <div class="aboutMeSection__descriptionListElement">
-                                <h3 class="section-subheading">zainteresowania</h3>
-                                <li class="aboutMeSection__descriptionListItem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore numquam amet expedita nesciunt, iusto recusandae sequi porro fugit accusamus aliquid tenetur, culpa corrupti doloribus pariatur molestiae? Beatae unde tempore ullam!</li>
-                            </div>
-                        </ul>
+                <h2 class="section-heading">projekt koncepcyjny aranżacji holu i salek konferencyjnych firmy zajmującej się produkcją źródeł światła</h2>    
+                <div class="projectSection__container scrlTrigger">
+                    <div class="description">
+                        <p>Celem projektu było zaaranżowanie holu, co odbywało się w 3 osobowych grupach oraz samodzielnym projekcie innego wybranego pomieszczenia, na przedstawionym przez prowadzących zajęcia rzucie. Wraz z koleżankami postanowiłyśmy wykonać projekt dla firmy produkującej źródła świateł. Zależało nam, aby osobie wchodzącej do budynku momentalnie kojarzył się on z pełnioną funkcją. Design wybranych przez nas pomieszczeń miał nawiązywać do holu. Postanowiłam wybrać dwie małe, sąsiadujące ze sobą salki konferencyjne. 
+                        Poniżej przedstawiam schematy i wizualizacje wykonane samodzielnie.</p>
+                    </div>
+                    <div class="description">
+                        <p>Aranżacja holu</p>
+                    </div>
+                    <a href="./img/swiatlo/" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/1.jpg" alt="">
+                    </a>
+                    <div class="description">
+                        <p>Schemat przedstawiający ścieżki komunikacyjne w holu.</p>
+                    </div>
+                    <a href="./img/swiatlo/original/2.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/2.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/3.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/3.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/4.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/4.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/5.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/5.jpg" alt="">
+                    </a>
+                    <div class="description">
+                        <p>Schematy przedstawiające elementy tworzące przestrzeń holu. Składa się ona ze oświetlenia LED, bryły przypominającej kostkę z luster i szkła oraz lady recepcyjnej.</p>
+                    </div>
+                    <a href="./img/swiatlo/original/6.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/6.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/7.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/7.jpg" alt="">
+                    </a>
+                    <div class="description">
+                        <p>Aranżacja salek konferencyjnych</p>
+                    </div>
+                    <a href="./img/swiatlo/original/8.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/8.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/9.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/9.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/10.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/10.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/11.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/11.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/12.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/12.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/13.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/13.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/14.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/14.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/15.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/15.jpg" alt="">
+                    </a>
+                    <a href="./img/swiatlo/original/16.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/swiatlo/original/16.jpg" alt="">
+                    </a>
+                    
                 </div>
             </section>
-            
         </main>
 
         <footer class="footerSection">
             <div class="footerSection__box wrapper">
                 <div class="footerSection__menu">
-                    <a class="footerSection__menu-btn btn-animation" href="#">home</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#aboutMe">o mnie</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#portfolio">portfolio</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#contact">kontakt</a>
+                    <a class="footerSection__menu-btn btn-animation" href="index.html">strona główna</a>
+                    <a class="footerSection__menu-btn btn-animation" href="#project">projekt</a>
                 </div>
                 <div class="footerSection__map">
                     <p>projekty:</p>
-                    <a class="footerSection__menu-btn btn-animation" href="#">projekt1</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#">projekt2</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#">projekt3</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project2.html">projekt2</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project3.html">projekt3</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project4.html">projekt4</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project5.html">projekt5</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project6.html">projekt6</a>
                 </div>
             </div>
-            <a href="https://www.flaticon.com/free-icon/happy_569501?term=emoticon&page=1&position=7"></a>
             <hr>
             <p class="footerSection__bottom-text"> <span class="footerSection__year"></span> 😊 developed by Damian Krzywda</p>
         </footer>
@@ -84,10 +135,9 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous"></script> -->
 
-        <!-- <script src="./js/gsap.js"></script> -->
-        <script src="./js/main.js"></script>
+        <script src="./js/gsap.js"></script>
+        <script src="./js/lightbox-plus-jquery.js"></script>
+        <!-- <script src="./js/main.js"></script> -->
     </body>
 </html>

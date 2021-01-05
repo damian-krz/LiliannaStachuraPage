@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 const scrlTrigger = document.querySelectorAll(".scrlTrigger");
 
 scrlTrigger.forEach(scrlTrigger => {
-    gsap.fromTo(scrlTrigger.children, {y: "+=50", opacity: 0}, {y: 0, opacity: 1, stagger: .25, duration: .5, ease: "ease", scrollTrigger: {
+    gsap.fromTo(scrlTrigger.children, {y: "+=50", opacity: 0}, {y: 0, opacity: 1, stagger: .25, duration: .5, ease: "ease-in-out", scrollTrigger: {
         trigger: scrlTrigger,
         start: "top 75%",
     }});
@@ -28,7 +28,7 @@ scrlTrigger.forEach(scrlTrigger => {
 
 const navBarTrigger = document.querySelector(".navBar");
 
-gsap.fromTo(navBarTrigger, {backgroundColor: "#24242398"}, {backgroundColor: "#242423", duration: .25, ease: "ease", scrollTrigger: {
+gsap.fromTo(navBarTrigger, {backgroundColor: "#eef4d460"}, {backgroundColor: "#eef4d4", duration: .5, ease: "ease-in-out", scrollTrigger: {
     trigger: ".homeSection",
     start: "bottom 25%",
     toggleActions: "play none none reverse",

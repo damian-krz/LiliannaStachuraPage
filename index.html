@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lilianna Stachura</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&display=swap" rel="stylesheet">
+
     
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/medium.css">
@@ -71,31 +73,42 @@
                 <div class="aboutMeSection__container container scrlTrigger">
                     <div class="aboutMeSection__subContainer">
                         <div class="aboutMeSection__img"></div>
-                        <ul class="aboutMeSection__descriptionList scrlTrigger">
+                        <div class="aboutMeSection__descriptionList scrlTrigger">
                             <div class="aboutMeSection__descriptionListElement">
-                                <h3 class="section-subheading">dane</h3>
-                                <li class="aboutMeSection__descriptionListItem">
-                                    <ul>
-                                        <li>imię i nazwisko: Lilianna Stachura</li>
-                                        <li>data urodzenia: 13 lutego 1996 roku</li>
-                                        <li>miejsce urodzenia: Świętochłowice</li>
-                                        <li>imię nazwisko: Lilianna Stachura</li>
-                                    </ul> 
-                                </li>
+                                <h3 class="section-subheading">dane osobowe</h3>
+                                <ul class="aboutMeSection__descriptionListItem">
+                                    <li><span>imię i nazwisko:</span> Lilianna Stachura</li>
+                                    <li><span>telefon:</span> 600-661-887</li>
+                                    <li><span>adres e-mail:</span> lilianna.s@onet.pl</li>
+                                    <li><span>data urodzenia:</span> 13 lutego 1996 roku</li>
+                                </ul>
                             </div>
                             <div class="aboutMeSection__descriptionListElement">
                                 <h3 class="section-subheading">wykształcenie</h3>
-                                <li class="aboutMeSection__descriptionListItem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore numquam amet expedita nesciunt, iusto recusandae sequi porro fugit accusamus aliquid tenetur, culpa corrupti doloribus pariatur molestiae? Beatae unde tempore ullam!</li>
+                                <ul class="aboutMeSection__descriptionListItem">
+                                    <li><span>2018 – 2020</span> Politechnika Śląska w Gliwicach, Architektura Wnętrz II stopień</li>
+                                    <li><span>2015 – 2018</span> Politechnika Śląska w Gliwicach,
+                                    Architektura Wnętrz I stopień</li>
+                                    <li><span>2012 – 2015</span> I Liceum Ogólnokształcące 
+                                    imienia Jana  Kochanowskiego w Świętochłowicach</li>
+                                </ul>
                             </div>
                             <div class="aboutMeSection__descriptionListElement">
-                                <h3 class="section-subheading">umiejętności</h3>
-                                <li class="aboutMeSection__descriptionListItem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore numquam amet expedita nesciunt, iusto recusandae sequi porro fugit accusamus aliquid tenetur, culpa corrupti doloribus pariatur molestiae? Beatae unde tempore ullam!</li>
+                                <h3 class="section-subheading">programy</h3>
+                                <ul class="aboutMeSection__descriptionListItem">
+                                    <li><span>SketchUp</span> + VRay 2.0 (Vray Next w trakcie nauki)</li>
+                                    <li><span>Autodesk</span> AutoCAD</li>
+                                    <li><span>Adobe</span> Photoshop</li>
+                                    <li><span>Autodesk</span> ArchiCAD</li>
+                                </ul>
                             </div>
                             <div class="aboutMeSection__descriptionListElement">
-                                <h3 class="section-subheading">zainteresowania</h3>
-                                <li class="aboutMeSection__descriptionListItem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore numquam amet expedita nesciunt, iusto recusandae sequi porro fugit accusamus aliquid tenetur, culpa corrupti doloribus pariatur molestiae? Beatae unde tempore ullam!</li>
+                                <h3 class="section-subheading">języki obce</h3>
+                                <ul class="aboutMeSection__descriptionListItem">
+                                    <li><span>Język angielski</span> – poziom podstawowy</li>
+                                </ul>
                             </div>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -195,13 +208,13 @@
                     <h3 class="section-subheading">napisz do mnie</h3>
                         <form class="contactSection__container-form" action="contactForm.php" method="post">
                             <label for="email" class="contactSection__container-form-label">e-mail:</label>
-                            <input type="text" class="contactSection__container-form-input" name="email">
+                            <input type="text" class="contactSection__container-form-input" name="email" placeholder="podaj e-mail">
                         
                             <label for="subject" class="contactSection__container-form-label">temat:</label>
-                            <input type="text" class="contactSection__container-form-input" name="subject">
+                            <input type="text" class="contactSection__container-form-input" name="subject" placeholder="podaj temat">
 
                             <label for="message" class="contactSection__container-form-label"></label>
-                            <textarea class="contactSection__container-form-textArea" name="message"></textarea>
+                            <textarea class="contactSection__container-form-textArea" name="message" placeholder="podaj treść"></textarea>
 
                             <button type=submit class="contactSection__container-form-formBtn" name="submit">wyślij</button>
                         </form>
@@ -213,8 +226,8 @@
             </section>
         </main>
 
-        <footer class="footerSection">
-            <div class="footerSection__box wrapper">
+        <footer class="footerSection wrapper">
+            <div class="footerSection__box">
                 <div class="footerSection__menu">
                     <a class="footerSection__menu-btn btn-animation" href="#">home</a>
                     <a class="footerSection__menu-btn btn-animation" href="#aboutMe">o mnie</a>
@@ -223,9 +236,12 @@
                 </div>
                 <div class="footerSection__map">
                     <p>projekty:</p>
-                    <a class="footerSection__menu-btn btn-animation" href="#">projekt1</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#">projekt2</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#">projekt3</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project1.html">projekt1</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project2.html">projekt2</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project3.html">projekt3</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project4.html">projekt4</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project5.html">projekt5</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project6.html">projekt6</a>
                 </div>
             </div>
             <hr>

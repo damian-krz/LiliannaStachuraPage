@@ -155,15 +155,11 @@ section {
   visibility: hidden;
 }
 
-.portfolioSection__card {
-  height: 40rem;
+.projectSection__container .image {
+  max-width: 50%;
 }
 
-.aboutMeSection__descriptionListElement:nth-child(1) {
-  padding-top: 0rem;
+.projectSection__container .description {
+  max-width: 50%;
 }
-
-.aboutMeSection__subContainer {
-  width: 90%;
-}
-/*# sourceMappingURL=large.css.map */
+/*# sourceMappingURL=project_large.css.map */

@@ -114,56 +114,23 @@ section {
   height: 5rem;
 }
 
+section {
+  font-size: 1.6rem;
+}
+
 .section-heading {
-  font-size: 3.6rem;
+  font-size: 3.4rem;
 }
 
 .section-subheading {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 
-.navBar {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 2rem;
+.projectSection__container .image {
+  max-width: 80%;
 }
 
-.navBar__desktopMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 5rem;
+.projectSection__container .description {
+  max-width: 80%;
 }
-
-.navBar__btn {
-  position: relative;
-  margin-right: 2rem;
-  padding: 2rem;
-  text-decoration: none;
-  color: #0e0f19;
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-
-.navBar__hamburgerButton {
-  visibility: hidden;
-}
-
-.portfolioSection__card {
-  height: 40rem;
-}
-
-.aboutMeSection__descriptionListElement:nth-child(1) {
-  padding-top: 0rem;
-}
-
-.aboutMeSection__subContainer {
-  width: 90%;
-}
-/*# sourceMappingURL=large.css.map */
+/*# sourceMappingURL=project_medium.css.map */

@@ -25,7 +25,7 @@ main {
 // ------------ SECTIONS ------------ //
 
 section {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     scroll-margin-top: 8rem;
 }
 
@@ -38,6 +38,7 @@ section {
     text-transform: uppercase;
     background-color: $main-color;
     transition: background-color .5s ease, color .5s ease;
+    white-space: pre-line;
 
     &--active {
         background-color: $theme-color;
@@ -141,7 +142,7 @@ section {
 
     &__hamburgerButton:focus {
         outline: none;
-        border: 1px solid $theme-color;
+        border: 2px solid $theme-color;
         border-radius: 1rem;
     }
 
@@ -171,22 +172,22 @@ section {
     &__field {
         height: 100%;
     }
-
+    
     &__field:hover &__btn {
         border-radius: 1rem;
         transform: scale(.95);
         color: $theme-color;
-        border: 1px solid $theme-color;
+        border: 2px solid $theme-color;
     }
-
+    
     &__btn:focus {
         outline: none;
         border-radius: 1rem;
         transform: scale(.95);
         color: $theme-color;
-        border: 1px solid $theme-color;
+        border: 2px solid $theme-color;
     }
-
+    
     &__btn {
         @include flexColumn;
         font-size: 2rem;
@@ -194,7 +195,7 @@ section {
         color: $font-color;
         text-decoration: none;
         background-color: $main-color;
-        border: 1px solid transparent;
+        border: 2px solid $font-color;
         transition: border-radius .25s ease, border .25s ease, transform .25s ease;
     }
 
@@ -233,31 +234,31 @@ section {
     }
 
     &__firstSlide {
-        @include images("../img/hala/projekt/medium/main_hala.jpg");
+        @include images("../img/hala/original/20.jpg");
     }
 
     &__secondSlide {
-        @include images("../img/hotel/6-wizualizacja.jpg");
+        @include images("../img/hotel/original/6.jpg");
     }
 
     &__thirdSlide {
-        @include images("../img/kino/5-wizka.jpg");
+        @include images("../img/kino/original/6.jpg");
     }
     
     &__fourthSlide {
-        @include images("../img/rower/10-wizka.jpg");
+        @include images("../img/rower/original/13.jpg");
     }
     
     &__fifthSlide {
-        @include images("../img/swiatlo/2 wizka.jpg");
+        @include images("../img/swiatlo/original/7.jpg");
     }
     
     &__sixthSlide {
-        @include images("../img/zielen/3wizka wiosna.jpg");
+        @include images("../img/zielen/original/5.jpg");
     }
     
     &__seventhSlide {
-        @include images("../img/zycie/11wizka.jpg");
+        @include images("../img/zycie/original/3.jpg");
     }
 }
 
@@ -290,12 +291,23 @@ section {
     }
 
     &__descriptionListElement {
-        padding-top: 3.2rem;
+        padding-top: 2rem;
     }
 
     &__descriptionListItem {
+        list-style: none;
         padding: 0 2rem;
-        text-align: center;
+        text-align: left;
+        
+        li {
+            padding: .5rem;
+            white-space: pre-line;
+            font-weight: bold;
+
+            span {
+                color: $font-color
+            }
+        }
     }
 }
 
@@ -347,27 +359,27 @@ section {
     }
 
     &__card-img--first {
-        @include images("../img/swiatlo/2 wizka.jpg");
+        @include images("../img/swiatlo/original/7.jpg");
     }
     
     &__card-img--second {
-        @include images("../img/hala/projekt/medium/main_hala.jpg");
+        @include images("../img/hala/original/20.jpg");
     }
     
     &__card-img--third {
-        @include images("../img/kino/5-wizka.jpg");
+        @include images("../img/kino/original/6.jpg");
     }
     
     &__card-img--fourth {
-        @include images("../img/rower/10-wizka.jpg");
+        @include images("../img/kolo/original/13.jpg");
     }
     
     &__card-img--fifth {
-        @include images("../img/hotel/6-wizualizacja.jpg");
+        @include images("../img/hotel/original/6.jpg");
     }
 
     &__card-img--sixth {
-        @include images("../img/zycie/11wizka.jpg");
+        @include images("../img/zycie/original/3.jpg");
     }
 
     &__card-infoTop {
@@ -401,7 +413,7 @@ section {
 
     &__card-moreBtn:hover {
         transform: scale(.95);
-        border: 1px solid $theme-color;
+        border: 2px solid $theme-color;
 
         .portfolioSection__card-moreBtnContent {
             color: $theme-color;
@@ -426,6 +438,7 @@ section {
         width: 100%;
         border-radius: 10px;
         color: $font-color;
+        background-color: $main-color;
         text-decoration: none;
         transition: color .25s ease;
     }
@@ -458,12 +471,14 @@ section {
             &-label {
                 padding: .75rem 0;
                 text-transform: uppercase;
+                font-weight: bold;
+                color: $theme-color;
             }
 
             &-input {
                 width: 75%;
                 padding: .75rem 2rem;
-                border: 2px solid transparent;
+                border: 2px solid $font-color;
                 transition: border-radius .25s ease, border .25s ease;
                 font-family: inherit;
 
@@ -484,7 +499,7 @@ section {
                 padding: .75rem 2rem;
                 width: 75%;
                 max-width: 75%;
-                border: 2px solid transparent;
+                border: 2px solid $font-color;
                 transition: border-radius .25s ease, border .25s ease;
 
                 &:hover {
@@ -531,10 +546,13 @@ section {
     &__contact-phone {
         @include flexColumn;
         padding-top: 3.2rem;
+        
 
         a {
             color: $font-color;
+            text-decoration: none;
             transition: color .25s ease;
+            font-weight: bold;
 
             &:hover {
                 color: $theme-color;
@@ -559,13 +577,14 @@ section {
         @include flexRow;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        font-weight: bold;
     }
 
     &__menu {
         @include flexRow;
 
         &-btn {
-            padding: 2rem 1rem;
+            padding: 2rem .5rem;
             text-decoration: none;
             color: $font-color;
             cursor: pointer;
@@ -574,20 +593,22 @@ section {
 
     &__map {
         @include flexRow;
+        flex-wrap: wrap;
 
         p {
-            padding: 2rem 1rem;
+            padding: .2rem 1rem;
+            color: $theme-color;
         }
     }
 
     &__bottom-text {
         font-size: 1.2rem;
         text-align: center;
-        padding: .2rem;
+        padding: .25rem;
     }
 }
 
 hr {
-    border: .1px solid $theme-color;
+    border: .1px solid $font-color;
 }
 

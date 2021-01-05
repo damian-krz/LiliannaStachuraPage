@@ -16,14 +16,15 @@ section {
     font-size: 2.2rem;
 }
 
-.portfolioSection {
-    &__cards {
-        grid-template-columns: 30% 30% 30%;
-        justify-content: space-evenly;
-    }
+// ------------ PROJECT ------------ //
 
-    &__card {
-        height: 30rem;
+.projectSection {
+    &__container {
+        .image {
+            max-width: 80%;
+        }
+        .description {
+            max-width: 80%;
+        }
     }
 }
-

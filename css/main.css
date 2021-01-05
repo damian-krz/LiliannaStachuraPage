@@ -28,7 +28,7 @@
 .intro__div {
   height: 100vh;
   width: 50%;
-  background-color: #242423;
+  background-color: #ffffff;
 }
 
 .wrapper {
@@ -47,18 +47,18 @@
 .btn-animation:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  color: #f5cb5c;
+  color: #acac76;
 }
 
 .btn-animation::after {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 25%;
   left: 50%;
   -webkit-transform: translate(-50%) scale(0);
           transform: translate(-50%) scale(0);
   height: .1rem;
   width: 25%;
-  background-color: #f5cb5c;
+  background-color: #acac76;
   content: "";
   -webkit-transition: -webkit-transform .25s ease;
   transition: -webkit-transform .25s ease;
@@ -73,7 +73,7 @@
 
 .btn-animation:focus {
   outline: none;
-  color: #f5cb5c;
+  color: #acac76;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
@@ -86,7 +86,7 @@
 .scrollSpy {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  color: #f5cb5c !important;
+  color: #acac76 !important;
 }
 
 .container {
@@ -94,14 +94,14 @@
 }
 
 section {
-  background-color: #333533;
+  background-color: #ffffff;
 }
 
 .headingNarrow {
   position: absolute;
   width: 0;
   height: 0;
-  background-color: #242423;
+  background-color: #ffffff;
   border: 1px solid transparent;
   -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
           clip-path: polygon(100% 0, 0% 100%, 0 0);
@@ -126,9 +126,9 @@ section {
 html {
   font-size: 62.5%;
   font-family: "Barlow", sans-serif;
-  color: #e8eddf;
+  color: #0e0f19;
   scroll-behavior: smooth;
-  background-color: #242423;
+  background-color: #ffffff;
 }
 
 main {
@@ -137,25 +137,26 @@ main {
 }
 
 section {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   scroll-margin-top: 8rem;
 }
 
 .section-heading {
   width: 100%;
-  color: #f5cb5c;
+  color: #acac76;
   padding: 6.2rem;
   text-align: center;
   font-size: 3.2rem;
   text-transform: uppercase;
-  background-color: #242423;
+  background-color: #ffffff;
   -webkit-transition: background-color .5s ease, color .5s ease;
   transition: background-color .5s ease, color .5s ease;
+  white-space: pre-line;
 }
 
 .section-heading--active {
-  background-color: #f5cb5c;
-  color: #242423;
+  background-color: #acac76;
+  color: #ffffff;
 }
 
 .section-subheading {
@@ -175,7 +176,7 @@ section {
   width: 100%;
   padding-bottom: 1rem;
   font-size: 2rem;
-  color: #f5cb5c;
+  color: #acac76;
   text-transform: uppercase;
 }
 
@@ -184,7 +185,7 @@ section {
   height: .2rem;
   width: 2rem;
   border-radius: 1rem;
-  background-color: #f5cb5c;
+  background-color: #acac76;
   content: "";
 }
 
@@ -206,7 +207,7 @@ section {
   height: 8rem;
   width: 100%;
   z-index: 2;
-  background-color: #242423;
+  background-color: #ffffff;
 }
 
 .navBar__hamburgerButton {
@@ -235,7 +236,7 @@ section {
   width: 4rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background-color: #f5cb5c;
+  background-color: #acac76;
   opacity: 1;
 }
 
@@ -247,14 +248,14 @@ section {
   width: 4rem;
   -webkit-transform: rotate(-90deg) translate(15px);
           transform: rotate(-90deg) translate(15px);
-  background-color: #f5cb5c;
+  background-color: #acac76;
 }
 
 .navBar__hamburgerButtonBar, .navBar__hamburgerButtonBar::before, .navBar__hamburgerButtonBar::after {
   position: absolute;
   height: .5rem;
   border-radius: 1rem;
-  background-color: #e8eddf;
+  background-color: #0e0f19;
   -webkit-transition: width .25s ease, background-color .25s ease, left .25s ease, -webkit-transform .25s ease;
   transition: width .25s ease, background-color .25s ease, left .25s ease, -webkit-transform .25s ease;
   transition: width .25s ease, background-color .25s ease, transform .25s ease, left .25s ease;
@@ -287,7 +288,7 @@ section {
 
 .navBar__hamburgerButton:focus {
   outline: none;
-  border: 1px solid #f5cb5c;
+  border: 2px solid #acac76;
   border-radius: 1rem;
 }
 
@@ -326,8 +327,8 @@ section {
   border-radius: 1rem;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  color: #f5cb5c;
-  border: 1px solid #f5cb5c;
+  color: #acac76;
+  border: 2px solid #acac76;
 }
 
 .hamburgerMenu__btn:focus {
@@ -335,8 +336,8 @@ section {
   border-radius: 1rem;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  color: #f5cb5c;
-  border: 1px solid #f5cb5c;
+  color: #acac76;
+  border: 2px solid #acac76;
 }
 
 .hamburgerMenu__btn {
@@ -355,10 +356,10 @@ section {
           justify-content: center;
   font-size: 2rem;
   height: 100%;
-  color: #e8eddf;
+  color: #0e0f19;
   text-decoration: none;
-  background-color: #242423;
-  border: 1px solid transparent;
+  background-color: #ffffff;
+  border: 2px solid #0e0f19;
   -webkit-transition: border-radius .25s ease, border .25s ease, -webkit-transform .25s ease;
   transition: border-radius .25s ease, border .25s ease, -webkit-transform .25s ease;
   transition: border-radius .25s ease, border .25s ease, transform .25s ease;
@@ -403,49 +404,49 @@ section {
 }
 
 .homeSection__firstSlide {
-  background-image: url("../img/hala/projekt/medium/main_hala.jpg");
+  background-image: url("../img/hala/original/20.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .homeSection__secondSlide {
-  background-image: url("../img/hotel/6-wizualizacja.jpg");
+  background-image: url("../img/hotel/original/6.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .homeSection__thirdSlide {
-  background-image: url("../img/kino/5-wizka.jpg");
+  background-image: url("../img/kino/original/6.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .homeSection__fourthSlide {
-  background-image: url("../img/rower/10-wizka.jpg");
+  background-image: url("../img/rower/original/13.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .homeSection__fifthSlide {
-  background-image: url("../img/swiatlo/2 wizka.jpg");
+  background-image: url("../img/swiatlo/original/7.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .homeSection__sixthSlide {
-  background-image: url("../img/zielen/3wizka wiosna.jpg");
+  background-image: url("../img/zielen/original/5.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .homeSection__seventhSlide {
-  background-image: url("../img/zycie/11wizka.jpg");
+  background-image: url("../img/zycie/original/3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -506,12 +507,23 @@ section {
 }
 
 .aboutMeSection__descriptionListElement {
-  padding-top: 3.2rem;
+  padding-top: 2rem;
 }
 
 .aboutMeSection__descriptionListItem {
+  list-style: none;
   padding: 0 2rem;
-  text-align: center;
+  text-align: left;
+}
+
+.aboutMeSection__descriptionListItem li {
+  padding: .5rem;
+  white-space: pre-line;
+  font-weight: bold;
+}
+
+.aboutMeSection__descriptionListItem li span {
+  color: #0e0f19;
 }
 
 .portfolioSection__cards {
@@ -567,42 +579,42 @@ section {
 }
 
 .portfolioSection__card-img--first {
-  background-image: url("../img/swiatlo/2 wizka.jpg");
+  background-image: url("../img/swiatlo/original/7.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .portfolioSection__card-img--second {
-  background-image: url("../img/hala/projekt/medium/main_hala.jpg");
+  background-image: url("../img/hala/original/20.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .portfolioSection__card-img--third {
-  background-image: url("../img/kino/5-wizka.jpg");
+  background-image: url("../img/kino/original/6.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .portfolioSection__card-img--fourth {
-  background-image: url("../img/rower/10-wizka.jpg");
+  background-image: url("../img/kolo/original/13.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .portfolioSection__card-img--fifth {
-  background-image: url("../img/hotel/6-wizualizacja.jpg");
+  background-image: url("../img/hotel/original/6.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .portfolioSection__card-img--sixth {
-  background-image: url("../img/zycie/11wizka.jpg");
+  background-image: url("../img/zycie/original/3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -626,7 +638,7 @@ section {
   height: 0;
   width: 100%;
   opacity: 0;
-  background-color: #33353398;
+  background-color: #acac7660;
   -webkit-transition: border-radius .25s ease, height .25s, opacity .5s;
   transition: border-radius .25s ease, height .25s, opacity .5s;
   top: 0;
@@ -650,7 +662,7 @@ section {
   height: 0;
   width: 100%;
   opacity: 0;
-  background-color: #33353398;
+  background-color: #acac7660;
   -webkit-transition: border-radius .25s ease, height .25s, opacity .5s;
   transition: border-radius .25s ease, height .25s, opacity .5s;
   bottom: 0;
@@ -670,7 +682,7 @@ section {
   border: 1px solid transparent;
   border-radius: 1rem;
   text-transform: uppercase;
-  background-color: #242423;
+  background-color: #ffffff;
   cursor: pointer;
   -webkit-transition: border .25s ease, -webkit-transform .25s ease;
   transition: border .25s ease, -webkit-transform .25s ease;
@@ -681,11 +693,11 @@ section {
 .portfolioSection__card-moreBtn:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  border: 1px solid #f5cb5c;
+  border: 2px solid #acac76;
 }
 
 .portfolioSection__card-moreBtn:hover .portfolioSection__card-moreBtnContent {
-  color: #f5cb5c;
+  color: #acac76;
 }
 
 .portfolioSection__card-moreBtn:focus {
@@ -695,7 +707,7 @@ section {
 }
 
 .portfolioSection__card-moreBtn:focus .portfolioSection__card-moreBtnContent {
-  color: #f5cb5c;
+  color: #acac76;
 }
 
 .portfolioSection__card-moreBtnContent {
@@ -718,7 +730,8 @@ section {
   height: 100%;
   width: 100%;
   border-radius: 10px;
-  color: #e8eddf;
+  color: #0e0f19;
+  background-color: #ffffff;
   text-decoration: none;
   -webkit-transition: color .25s ease;
   transition: color .25s ease;
@@ -788,12 +801,14 @@ section {
 .contactSection__container-form-label {
   padding: .75rem 0;
   text-transform: uppercase;
+  font-weight: bold;
+  color: #acac76;
 }
 
 .contactSection__container-form-input {
   width: 75%;
   padding: .75rem 2rem;
-  border: 2px solid transparent;
+  border: 2px solid #0e0f19;
   -webkit-transition: border-radius .25s ease, border .25s ease;
   transition: border-radius .25s ease, border .25s ease;
   font-family: inherit;
@@ -801,12 +816,12 @@ section {
 
 .contactSection__container-form-input:hover {
   border-radius: 1rem;
-  border: 2px solid #f5cb5c;
+  border: 2px solid #acac76;
 }
 
 .contactSection__container-form-input:focus {
   border-radius: 1rem;
-  border: 2px solid #f5cb5c;
+  border: 2px solid #acac76;
   outline: none;
 }
 
@@ -815,19 +830,19 @@ section {
   padding: .75rem 2rem;
   width: 75%;
   max-width: 75%;
-  border: 2px solid transparent;
+  border: 2px solid #0e0f19;
   -webkit-transition: border-radius .25s ease, border .25s ease;
   transition: border-radius .25s ease, border .25s ease;
 }
 
 .contactSection__container-form-textArea:hover {
   border-radius: 1rem;
-  border: 2px solid #f5cb5c;
+  border: 2px solid #acac76;
 }
 
 .contactSection__container-form-textArea:focus {
   border-radius: 1rem;
-  border: 2px solid #f5cb5c;
+  border: 2px solid #acac76;
   outline: none;
 }
 
@@ -838,8 +853,8 @@ section {
   font-weight: bold;
   border: 2px solid transparent;
   text-transform: uppercase;
-  color: #242423;
-  background-color: #f5cb5c;
+  color: #ffffff;
+  background-color: #acac76;
   cursor: pointer;
   -webkit-transition: border-radius .25s ease;
   transition: border-radius .25s ease;
@@ -855,8 +870,8 @@ section {
 }
 
 .contactSection__container-form-formBtn:active {
-  color: #e8eddf;
-  border: 2px solid #e8eddf;
+  color: #0e0f19;
+  border: 2px solid #0e0f19;
 }
 
 .contactSection__contact-phone {
@@ -877,23 +892,25 @@ section {
 }
 
 .contactSection__contact-phone a {
-  color: #e8eddf;
+  color: #0e0f19;
+  text-decoration: none;
   -webkit-transition: color .25s ease;
   transition: color .25s ease;
+  font-weight: bold;
 }
 
 .contactSection__contact-phone a:hover {
-  color: #f5cb5c;
+  color: #acac76;
 }
 
 .contactSection__contact-phone a:focus {
   outline: none;
-  color: #f5cb5c;
+  color: #acac76;
 }
 
 .footerSection {
   bottom: 0;
-  background-color: #242423;
+  background-color: #ffffff;
   font-size: 1.4rem;
 }
 
@@ -912,6 +929,7 @@ section {
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  font-weight: bold;
 }
 
 .footerSection__menu {
@@ -927,9 +945,9 @@ section {
 }
 
 .footerSection__menu-btn {
-  padding: 2rem 1rem;
+  padding: 2rem .5rem;
   text-decoration: none;
-  color: #e8eddf;
+  color: #0e0f19;
   cursor: pointer;
 }
 
@@ -943,19 +961,22 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footerSection__map p {
-  padding: 2rem 1rem;
+  padding: .2rem 1rem;
+  color: #acac76;
 }
 
 .footerSection__bottom-text {
   font-size: 1.2rem;
   text-align: center;
-  padding: .2rem;
+  padding: .25rem;
 }
 
 hr {
-  border: 0.1px solid #f5cb5c;
+  border: 0.1px solid #0e0f19;
 }
 /*# sourceMappingURL=main.css.map */

@@ -28,7 +28,7 @@
 .intro__div {
   height: 100vh;
   width: 50%;
-  background-color: #242423;
+  background-color: #ffffff;
 }
 
 .wrapper {
@@ -47,18 +47,18 @@
 .btn-animation:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  color: #f5cb5c;
+  color: #acac76;
 }
 
 .btn-animation::after {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 25%;
   left: 50%;
   -webkit-transform: translate(-50%) scale(0);
           transform: translate(-50%) scale(0);
   height: .1rem;
   width: 25%;
-  background-color: #f5cb5c;
+  background-color: #acac76;
   content: "";
   -webkit-transition: -webkit-transform .25s ease;
   transition: -webkit-transform .25s ease;
@@ -73,7 +73,7 @@
 
 .btn-animation:focus {
   outline: none;
-  color: #f5cb5c;
+  color: #acac76;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
@@ -86,7 +86,7 @@
 .scrollSpy {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  color: #f5cb5c !important;
+  color: #acac76 !important;
 }
 
 .container {
@@ -94,14 +94,14 @@
 }
 
 section {
-  background-color: #333533;
+  background-color: #ffffff;
 }
 
 .headingNarrow {
   position: absolute;
   width: 0;
   height: 0;
-  background-color: #242423;
+  background-color: #ffffff;
   border: 1px solid transparent;
   -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);
           clip-path: polygon(100% 0, 0% 100%, 0 0);
@@ -112,6 +112,10 @@ section {
 .headingNarrow--active {
   width: 5rem;
   height: 5rem;
+}
+
+section {
+  font-size: 1.6rem;
 }
 
 .section-heading {

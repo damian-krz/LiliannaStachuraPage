@@ -8,46 +8,126 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./css/projects.css">
+    <link rel="stylesheet" href="./css/project_main.css">
+    <link rel="stylesheet" href="./css/lightbox.css">
 
-    <link rel="stylesheet" media="screen and (min-width: 576px)" href="./css/small.css">
-    <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/medium.css">
-    <link rel="stylesheet" media="screen and (min-width: 992px)" href="./css/large.css">
-    <script src="https://kit.fontawesome.com/4e7c6c64fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/project_medium.css">
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="./css/project_large.css">
 </head>
     <body>
-    
         <nav class="navBar">
-            <a href="project2.html" class="navBar-previousProject navBar-arrows">
-                <i class="fas fa-arrow-alt-circle-left"></i>
-            </a>
-            <h2>projekt3</h2>
-            <a href="project1.html" class="navBar-nextProject navBar-arrows">
-                <i class="fas fa-arrow-alt-circle-right"></i>
-            </a>
+            <button class="navBar__hamburgerButton">
+                <div class="navBar__hamburgerButtonBar"></div>
+            </button>
+            <div class="navBar__desktopMenu">
+                <a class="navBar__btn btn-animation" 
+                href="index.html">strona główna</a>
+                <a class="navBar__btn btn-animation" href="#project">projekt</a>
+            </div>
         </nav>
         
+        <aside class="hamburgerMenu">
+                <div class="hamburgerMenu__field">
+                    <a class="hamburgerMenu__btn" href="#">home</a>
+                </div>
+                <div class="hamburgerMenu__field">
+                    <a class="hamburgerMenu__btn" href="#project">projekt</a>
+                </div>
+        </aside>
+
         <main>
+            <header class="homeSection" id="#">  
+                <div class="homeSection__headerImage--project3"></div>
+            </header>
             
-            
+            <section class="projectSection wrapper" id="project">
+                <div class="headingNarrow"></div>         
+                <h2 class="section-heading">projekty na terenach wybranych przestrzeni miejskich</h2>    
+                <div class="projectSection__container scrlTrigger">
+                    <h3 class="section-subheading">zespół obiektów rekreacyjno-użytkowych na terenie parku sląskiego</h3> 
+                    <div class="description">
+                        <p> Zaprojektowany zespół obiektów składa się z głównego, zadaszonego okręgu oraz z kilku mniejszych. Według zadania został usytuowany w Parku Śląskim przy Alei Leśnej. Z założenia obiekty korespondują z zastanym naturalnym krajobrazem parku – są otoczone drzewami oraz wpuszczone w głąb gruntu. Obiekty zostały otoczone pagórkami, które pełnią rolę znaku naprowadzającego oraz osłony.  Mniejsze okręgi przede wszystkim pełnią rolę siedzisk. W obrębie głównego okręgu, oprócz miejsc siedzących, znajdziemy schody oraz wyznaczone pole do rozpalenia ogniska. 
+                        Projekt ten ma pomóc zintegrować lokalną społeczność, stworzyć miejsce zachęcające do spędzania czasu na świeżym powietrzu oraz zaopatrzyć park w dodatkowe miejsca siedzące, które szczególnie brakuje przy wybranej alei.</p>
+                    </div>
+                    <a href="./img/zielen/original/1.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/zielen/original/1.jpg" alt="">
+                    </a>
+                    <a href="./img/zielen/original/2.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/zielen/original/2.jpg" alt="">
+                    </a>
+                    <a href="./img/zielen/original/3.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/zielen/original/3.jpg" alt="">
+                    </a>
+                    <a href="./img/zielen/original/4.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/zielen/original/4.jpg" alt="">
+                    </a>
+                    <a href="./img/zielen/original/5.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/zielen/original/5.jpg" alt="">
+                    </a>
+                    <a href="./img/zielen/original/6.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/zielen/original/6.jpg" alt="">
+                    </a>
+                    <a href="./img/zielen/original/7.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/zielen/original/7.jpg" alt="">
+                    </a>
+                    <div class="description">
+                        <p>Wizualizacje przedstawiające projekt w trakcie czterech pór roku.</p>
+                    </div>
+                    <a href="./img/zielen/original/8.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/zielen/original/8.jpg" alt="">
+                    </a>
+                    <div class="description">
+                        <p>Schemat przedstawiający system odprowadzania wody opadowej z zaprojektowanego zespołu obiektów. Zebrana deszczówka może być ponownie wykorzystywana, np. do nawadniania kwiatów na terenie parku.</p>
+                    </div>
+                </div>
+                <div class="projectSection__container scrlTrigger">
+                    <h3 class="section-subheading"> S K O S Y / projekt zagospodarowania skweru doncaster w gliwicach na kino plenerowe z funkcjami    dodatkowymi </h3> 
+                    <div class="description">
+                        <p>Celem projektu było zagospodarowanie wybranego skweru tak, aby stał się on atrakcyjny dla mieszkańców Gliwic oraz miast sąsiadujących. Zdecydowałam się na zaprojektowanie na jego trenie kina plenerowego. Przestrzeń składa się z pagórków, które kryją w sobie funkcje dodatkowe takie jak bar, sklep, wypożyczalnię krzeseł i toalety oraz równocześnie pełnią rolę widowni dla wyświetlanego filmu na zakrzywionym ekranie. </p>
+                    </div>
+                    <a href="./img/kino/original/1.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/kino/original/1.jpg" alt="">
+                    </a>
+                    <a href="./img/kino/original/2.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/kino/original/2.jpg" alt="">
+                    </a>
+                    <a href="./img/kino/original/3.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/kino/original/3.jpg" alt="">
+                    </a>
+                    <a href="./img/kino/original/4.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/kino/original/4.jpg" alt="">
+                    </a>
+                    <a href="./img/kino/original/5.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/kino/original/5.jpg" alt="">
+                    </a>
+                    <div class="description">
+                        <p>Schemat przedstawiający rozmieszczenie funkcji dodatkowych - baru, sklepu, małej sceny oraz toalet.</p>
+                    </div>
+                    <a href="./img/kino/original/6.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/kino/original/6.jpg" alt="">
+                    </a>
+                    <a href="./img/kino/original/7.jpg" data-lightbox="roadtrip">
+                        <img class="image" src="./img/kino/original/7.jpg" alt="">
+                    </a>
+                </div>
+            </section>
         </main>
 
         <footer class="footerSection">
             <div class="footerSection__box wrapper">
                 <div class="footerSection__menu">
-                    <a class="footerSection__menu-btn btn-animation" href="#">home</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#aboutMe">o mnie</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#portfolio">portfolio</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#contact">kontakt</a>
+                    <a class="footerSection__menu-btn btn-animation" href="index.html">strona główna</a>
+                    <a class="footerSection__menu-btn btn-animation" href="#project">projekt</a>
                 </div>
                 <div class="footerSection__map">
                     <p>projekty:</p>
-                    <a class="footerSection__menu-btn btn-animation" href="#">projekt1</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#">projekt2</a>
-                    <a class="footerSection__menu-btn btn-animation" href="#">projekt3</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project1.html">projekt1</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project2.html">projekt2</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project4.html">projekt4</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project5.html">projekt5</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project6.html">projekt6</a>
                 </div>
             </div>
-            <a href="https://www.flaticon.com/free-icon/happy_569501?term=emoticon&page=1&position=7"></a>
             <hr>
             <p class="footerSection__bottom-text"> <span class="footerSection__year"></span> 😊 developed by Damian Krzywda</p>
         </footer>
@@ -55,10 +135,9 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous"></script> -->
 
-        <!-- <script src="./js/gsap.js"></script> -->
-        <script src="./js/main.js"></script>
+        <script src="./js/gsap.js"></script>
+        <script src="./js/lightbox-plus-jquery.js"></script>
+        <!-- <script src="./js/main.js"></script> -->
     </body>
 </html>

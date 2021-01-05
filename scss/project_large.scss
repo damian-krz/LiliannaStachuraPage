@@ -37,18 +37,16 @@
     }
 }
 
-.portfolioSection {
-    &__card {
-        height: 40rem;
+// ------------ PROJECT ------------ //
+
+.projectSection {
+    &__container {
+        .image {
+            max-width: 50%;
+        }
+        .description {
+            max-width: 50%;
+        }
     }
 }
 
-.aboutMeSection {
-    &__descriptionListElement:nth-child(1) {
-        padding-top: 0rem;
-    }
-
-    &__subContainer {
-        width: 90%;
-    }
-}
