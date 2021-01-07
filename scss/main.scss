@@ -12,10 +12,11 @@
 
 html {
     font-size: 62.5%;
-    font-family: "Barlow", sans-serif;
+    font-family: "Dosis", sans-serif;
     color: $font-color;
     scroll-behavior: smooth;
     background-color: $main-color;
+    font-weight: bold;
 }
 
 main {
@@ -52,7 +53,7 @@ section {
     width: 100%;
     padding-bottom: 1rem;
     font-size: 2rem;
-    color: $theme-color;
+    color: $font-color;
     text-transform: uppercase;
 }
 
@@ -61,7 +62,7 @@ section {
     height: .2rem;
     width: 2rem;
     border-radius: 1rem;
-    background-color: $theme-color;
+    background-color: $font-color;
     content: "";
 }
 
@@ -76,6 +77,24 @@ section {
     width: 100%;
     z-index: 2;
     background-color: $main-color;
+
+    &__logo {
+        position: absolute;
+        left: 2.5rem;
+        border: 1px solid transparent;
+        background: transparent;
+
+        img {
+            height: 4rem;
+            width: auto;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $theme-color;
+            border-radius: 1rem;
+        }
+    }
 
     &__hamburgerButton {
         @include flexColumn;
@@ -142,7 +161,7 @@ section {
 
     &__hamburgerButton:focus {
         outline: none;
-        border: 2px solid $theme-color;
+        border: 1px solid $theme-color;
         border-radius: 1rem;
     }
 
@@ -166,7 +185,6 @@ section {
     column-gap: 1rem;
     z-index: 1;
     text-transform: uppercase;
-    font-weight: bold;
     transition: top .25s ease;
 
     &__field {
@@ -246,7 +264,7 @@ section {
     }
     
     &__fourthSlide {
-        @include images("../img/rower/original/13.jpg");
+        @include images("../img/kolo/original/13.jpg");
     }
     
     &__fifthSlide {
@@ -269,27 +287,35 @@ section {
     &__container {
         @include flexColumn;
     }
-
+    
     &__subContainer {
-        @include flexRow;
+        @include flexColumn;
         flex-wrap: wrap;
         justify-content: space-evenly;
         width: 100%;
     }
 
+    &__description {
+        width: 90%;
+        padding: 0 2rem;
+        text-align: justify;
+        white-space: pre-line;
+        border: 1px solid $theme-color
+    }
+    
     &__img {
-        @include images("../img/aboutMeImg.jpg");
-        width: 95%;
-        height: 50rem;
+        @include images("../img/aboutMePhoto.png");
+        width: 23.9rem;
+        height: 33.7rem;
         max-width: 43.8rem;
     }
-
+    
     &__descriptionList {
-        width: 95%;
-        max-width: 43.8rem;
+        display: grid;
+        grid-template-columns: 100%;
         list-style: none;
     }
-
+    
     &__descriptionListElement {
         padding-top: 2rem;
     }
@@ -302,7 +328,6 @@ section {
         li {
             padding: .5rem;
             white-space: pre-line;
-            font-weight: bold;
 
             span {
                 color: $font-color
@@ -471,8 +496,7 @@ section {
             &-label {
                 padding: .75rem 0;
                 text-transform: uppercase;
-                font-weight: bold;
-                color: $theme-color;
+                color: $font-color;
             }
 
             &-input {
@@ -552,7 +576,6 @@ section {
             color: $font-color;
             text-decoration: none;
             transition: color .25s ease;
-            font-weight: bold;
 
             &:hover {
                 color: $theme-color;
@@ -577,7 +600,6 @@ section {
         @include flexRow;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        font-weight: bold;
     }
 
     &__menu {
@@ -609,6 +631,6 @@ section {
 }
 
 hr {
-    border: .1px solid $font-color;
+    border: .1px solid $theme-color;
 }
 

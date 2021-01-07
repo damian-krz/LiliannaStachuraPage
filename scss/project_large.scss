@@ -42,10 +42,15 @@
 .projectSection {
     &__container {
         .image {
-            max-width: 50%;
+            max-width: 55%;
         }
+
         .description {
-            max-width: 50%;
+            max-width: 55%;
+        }
+
+        .photo-container {
+            max-width: 75%;
         }
     }
 }

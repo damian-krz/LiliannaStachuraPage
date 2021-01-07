@@ -16,6 +16,13 @@ section {
     font-size: 2.2rem;
 }
 
+.aboutMeSection {
+    &__descriptionList {
+        grid-template-columns: 55% 50%;
+    }
+}
+
+
 .portfolioSection {
     &__cards {
         grid-template-columns: 30% 30% 30%;
@@ -26,4 +33,5 @@ section {
         height: 30rem;
     }
 }
+
 

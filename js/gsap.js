@@ -28,7 +28,7 @@ scrlTrigger.forEach(scrlTrigger => {
 
 const navBarTrigger = document.querySelector(".navBar");
 
-gsap.fromTo(navBarTrigger, {backgroundColor: "#eef4d460"}, {backgroundColor: "#eef4d4", duration: .5, ease: "ease-in-out", scrollTrigger: {
+gsap.fromTo(navBarTrigger, {backgroundColor: "#ffffff60"}, {backgroundColor: "#ffffff", duration: .5, ease: "ease-in-out", scrollTrigger: {
     trigger: ".homeSection",
     start: "bottom 25%",
     toggleActions: "play none none reverse",

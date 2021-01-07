@@ -10,6 +10,7 @@ let $footerYear;
 let $navBar;
 let $headingNarrow;
 let $headingSection;
+let $form;
 
 const initialize = () => {
     prepareDomElements();
@@ -30,6 +31,7 @@ const prepareDomElements = () => {
     $navBar = document.querySelector(".navBar__desktopMenu");
     $headingNarrow = document.querySelectorAll(".headingNarrow");
     $headingSection = document.querySelectorAll(".section-heading");
+    $form = document.querySelector("#form");
 };
 
 const prepareDomEvents = () => {
@@ -46,6 +48,7 @@ const prepareDomEvents = () => {
     });
     $body.addEventListener("click", closeHamburgerMenu);
     window.addEventListener("load", currentYear);
+    $form.addEventListener("submit", submitForm);
 
     const scrollSpy = (sectionTarget, child) => {
         const section = document.querySelector(sectionTarget);
@@ -97,6 +100,10 @@ const prepareDomEvents = () => {
     headingSpy();
 
 };
+
+const submitForm = (e) => {
+   console.log(e);
+}
 
 
 // ------------ INTRO ------------ //
@@ -161,6 +168,8 @@ const homeSlideShow = () => {
     setInterval(() => {
         $homeSlider.style.transform = "translateX(-14.28%)";
     }, 1000);
+
+    console.log(document.cookie);
 };
 
 const infiniteHomeSlideShow = () => {
@@ -217,5 +226,6 @@ const currentYear = () => {
     const year = (new Date).getFullYear();
     $footerYear.innerHTML = year;
 };
+
 
 document.addEventListener("DOMContentLoaded", initialize);

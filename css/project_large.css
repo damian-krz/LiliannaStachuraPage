@@ -47,7 +47,7 @@
 .btn-animation:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  color: #acac76;
+  color: #beb0d1;
 }
 
 .btn-animation::after {
@@ -58,7 +58,7 @@
           transform: translate(-50%) scale(0);
   height: .1rem;
   width: 25%;
-  background-color: #acac76;
+  background-color: #beb0d1;
   content: "";
   -webkit-transition: -webkit-transform .25s ease;
   transition: -webkit-transform .25s ease;
@@ -73,7 +73,7 @@
 
 .btn-animation:focus {
   outline: none;
-  color: #acac76;
+  color: #beb0d1;
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
 }
@@ -86,7 +86,7 @@
 .scrollSpy {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
-  color: #acac76 !important;
+  color: #beb0d1 !important;
 }
 
 .container {
@@ -156,10 +156,14 @@ section {
 }
 
 .projectSection__container .image {
-  max-width: 50%;
+  max-width: 55%;
 }
 
 .projectSection__container .description {
-  max-width: 50%;
+  max-width: 55%;
+}
+
+.projectSection__container .photo-container {
+  max-width: 75%;
 }
 /*# sourceMappingURL=project_large.css.map */

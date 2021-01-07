@@ -37,18 +37,14 @@
     }
 }
 
-.portfolioSection {
-    &__card {
-        height: 40rem;
+.aboutMeSection {
+    &__descriptionList {
+        grid-template-columns: 25% 25% 30% 25%;
     }
 }
 
-.aboutMeSection {
-    &__descriptionListElement:nth-child(1) {
-        padding-top: 0rem;
-    }
-
-    &__subContainer {
-        width: 90%;
+.portfolioSection {
+    &__card {
+        height: 40rem;
     }
 }

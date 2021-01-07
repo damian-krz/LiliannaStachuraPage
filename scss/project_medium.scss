@@ -21,10 +21,14 @@ section {
 .projectSection {
     &__container {
         .image {
-            max-width: 80%;
+            max-width: 75%;
         }
         .description {
-            max-width: 80%;
+            max-width: 75%;
+        }
+        
+        .photo-container {
+            max-width: 85%;
         }
     }
 }

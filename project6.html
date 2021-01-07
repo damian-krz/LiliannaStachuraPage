@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lilianna Stachura</title>
+    <title>Życie</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./css/project_main.css">
     <link rel="stylesheet" href="./css/lightbox.css">
+    <link rel='shortcut icon' type='image/x-icon' href="./img/favicon.ico"/>
 
     <link rel="stylesheet" media="screen and (min-width: 768px)" href="./css/project_medium.css">
     <link rel="stylesheet" media="screen and (min-width: 992px)" href="./css/project_large.css">
 </head>
     <body>
         <nav class="navBar">
+            <a class="navBar__logo" href="index.html">
+                <img src="./img/logo.png" alt="logo">
+            </a>
             <button class="navBar__hamburgerButton">
                 <div class="navBar__hamburgerButtonBar"></div>
             </button>
@@ -27,12 +32,12 @@
         </nav>
         
         <aside class="hamburgerMenu">
-                <div class="hamburgerMenu__field">
-                    <a class="hamburgerMenu__btn" href="#">home</a>
-                </div>
-                <div class="hamburgerMenu__field">
-                    <a class="hamburgerMenu__btn" href="#project">projekt</a>
-                </div>
+            <div class="hamburgerMenu__field">
+                <a class="hamburgerMenu__btn" href="index.html">strona główna</a>
+            </div>
+            <div class="hamburgerMenu__field">
+                <a class="hamburgerMenu__btn" href="#project">projekt</a>
+            </div>
         </aside>
 
         <main>
@@ -49,21 +54,19 @@
                         <p> Celem zaprojektowanej wystawy jest uświadomienie odbiorcom, że piękno życia ukrywa się w szczegółach, które warto dostrzegać i doceniać. Wystawa została podzielona na trzy części, którym odpowiadają kolejno zaaranżowane, w symboliczny sposób, kontenery. </p>
                     </div>
                     <a href="./img/zycie/original/1.jpg" data-lightbox="roadtrip">
-                        <img class="image" src="./img/zycie/original/1.jpg" alt="">
+                        <img class="image" src="./img/zycie/original/1.jpg" alt="kontenery">
                     </a>
                     <div class="description">
                         <p>Kontener nr 1: ,,Bezpieczeństwo” – pierwsza część wystawy odnosi się do miejsc, w których czujemy wolność i bezpieczeństwo. Dlatego postanowiłam przedstawić, w sposób symboliczny, dom.  Ważnym meblem, każdego lokum jest stół, przy którym zazwyczaj spożywamy posiłki w gronie bliskich nam osób. Niezależnie do tego jakiej jest wielkości i z jakich materiałów został wykonany, łączy ludzi i pozwala cieszyć się wzajemnym towarzystwem.
-
                         Kontener nr 2: ,,Wolność” – wewnątrz drugiego kontenera, na podstawie fotografii przedstawiających osoby w różnym wieku, postanowiłam ukazać, że piękno życia tkwi w emocjach i uczuciach oraz dotyka każdego, niezależnie od daty urodzenia. 
-
                         Kontener nr 3: ,,Chwila” – trzeci kontener jest miejscem, który tworzą ludzie. Obok kontenera umieszczony jest aparat fotograficznym, którym sfotografować się może, każdy odwiedzający wystawę, a następnie umieścić zdjęcia na ściankach. Zabieg ten ukazuje, że piękno tkwi w każdym z nas. 
                             </p>
                     </div>
                     <a href="./img/zycie/original/2.jpg" data-lightbox="roadtrip">
-                        <img class="image" src="./img/zycie/original/2.jpg" alt="">
+                        <img class="image" src="./img/zycie/original/2.jpg" alt="przekrój kontenerów">
                     </a>
                     <a href="./img/zycie/original/3.jpg" data-lightbox="roadtrip">
-                        <img class="image" src="./img/zycie/original/3.jpg" alt="">
+                        <img class="image" src="./img/zycie/original/3.jpg" alt="wizualizacja kontenerów">
                     </a>
                    
                 </div>
@@ -78,11 +81,11 @@
                 </div>
                 <div class="footerSection__map">
                     <p>projekty:</p>
-                    <a class="footerSection__menu-btn btn-animation" href="project1.html">projekt1</a>
-                    <a class="footerSection__menu-btn btn-animation" href="project2.html">projekt2</a>
-                    <a class="footerSection__menu-btn btn-animation" href="project3.html">projekt3</a>
-                    <a class="footerSection__menu-btn btn-animation" href="project4.html">projekt4</a>
-                    <a class="footerSection__menu-btn btn-animation" href="project5.html">projekt5</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project1.html">aranżacja</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project2.html">florian</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project3.html">zieleń</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project4.html">w koło</a>
+                    <a class="footerSection__menu-btn btn-animation" href="project5.html">fluid</a>
                 </div>
             </div>
             <hr>
@@ -95,6 +98,6 @@
 
         <script src="./js/gsap.js"></script>
         <script src="./js/lightbox-plus-jquery.js"></script>
-        <!-- <script src="./js/main.js"></script> -->
+        <script src="./js/project_main.js"></script>
     </body>
 </html>
